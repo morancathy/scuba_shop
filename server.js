@@ -82,6 +82,10 @@ app.get('/underthesea', (req, res) => {
 });
 
 //new
+app.get('/underthesea/new', (req, res) => {
+  res.render('New');
+  });
+
 //deletes
 //update
 //create

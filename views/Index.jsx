@@ -5,7 +5,7 @@ class Index extends React.Component {
     return (
       <div>
         <nav className="newProductLink">
-          <a href="/fruits/new">Create New Product</a>
+          <a href="/underthesea/new">Create New Product</a>
         </nav>
         <ul>
           {
@@ -22,7 +22,6 @@ class Index extends React.Component {
                   </form>
                   <a href={`/underthesea/${product._id}/edit`}>Edit this product</a>
                 </li>
-
               )
             })
           }
