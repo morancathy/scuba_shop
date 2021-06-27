@@ -103,6 +103,17 @@ app.post('/underthesea', (req, res) =>{
 });
 //edit
 //show
+app.get('/underthesea/:id', (req, res) => {
+  Product.findById(req.params.id, (err, foundProduct)=>{
+    if(err){
+      res.status(404).send({
+          msg: err.message
+      })
+    } else {
+      res.render('Show', {product: foundProduct});
+    };
+  });
+});
 
 //tell app to listen on port 3000 for HTTP requests from clients
 app.listen(PORT, () => {
