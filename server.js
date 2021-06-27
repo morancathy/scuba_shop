@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-// const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const Product = require('./models/product.js');  //will eventually delete
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.urlencoded({extended: true}));
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 //eventually put code to reach controllers
