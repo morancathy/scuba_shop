@@ -89,6 +89,18 @@ app.get('/underthesea/new', (req, res) => {
 //deletes
 //update
 //create
+app.post('/underthesea', (req, res) =>{
+  Product.create(req.body, (err, createdProduct) => {
+    if(err){
+      res.status(404).send({
+        msg: err.message
+      })
+    } else {
+      console.log(createdProduct);
+      res.redirect('/underthesea');
+    };
+  });
+});
 //edit
 //show
 
