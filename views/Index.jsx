@@ -5,7 +5,7 @@ class Index extends React.Component {
   render(){
     return (
       <DefaultLayout
-      title={"New Product"}
+      title={"Products"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <nav className="newProductLink">
           <a href="/underthesea/new">Create New Product</a>
@@ -20,10 +20,6 @@ class Index extends React.Component {
                   <img className="imgTag" src={product.img} alt="Product Image"/>
                   <p>Price: {product.price}</p>
                   <p>Quanity: {product.qty}</p>
-                  <form method="POST" action={`/underthesea/${product._id}?_method=DELETE`}>
-                    <input type="submit" value="DELETE"/>
-                  </form>
-                  <a href={`/underthesea/${product._id}/edit`}>Edit this product</a>
                 </li>
               )
             })
