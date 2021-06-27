@@ -13,6 +13,10 @@ class Index extends React.Component {
               return (
                 <li key={product._id}>
                   The <a href={`/underthesea/${product._id}`}>{product.name}</a>
+                  <p>{product.description}</p>
+                  <img src={product.img} alt="Product Image"/>
+                  <p>Price: {product.price}</p>
+                  <p>Quanity: {product.qty}</p>
                   <form method="POST" action={`/underthesea/${product._id}?_method=DELETE`}>
                     <input type="submit" value="DELETE"/>
                   </form>
