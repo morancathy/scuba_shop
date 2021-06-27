@@ -11,8 +11,6 @@ db.once('connected', () => {
   console.log('Connected to Mongo')
 });
 
-
-
 // Set up Views Engine (app.set)
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
@@ -27,34 +25,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-//eventually put code to reach controllers
+app.use('/underthesea', require('./controllers/routeController.js')); //main routes
+// app.use('/user', require('./controllers/userRouteController.js'))   //shopping cart routes
 
-// routes for testing
-app.get('/underthesea/seed', async (req, res) => {
-  Product.create([
-      {
-        name: 'Beans',
-        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-        img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
-        price: 5,
-        qty: 99
-      }, {
-        name: 'Bones',
-        description: 'It\'s just a bag of bones.',
-        img: 'http://bluelips.com/prod_images_large/bones1.jpg',
-        price: 25,
-        qty: 0
-      }, {
-        name: 'Bins',
-        description: 'A stack of colorful bins for your beans and bones.',
-        img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
-        price: 7000,
-        qty: 1
-      }
-    ], (err, data) =>{
-      res.redirect('/underthesea');
-  });
-});
 
 //   try {
 //     const seedItems = await Product.create(newProducts)
@@ -69,51 +42,13 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-app.get('/underthesea', (req, res) => {
-  Product.find({}, (err, allProducts)=> {
-    if(err){
-      res.status(404).send({
-        msg:err.message
-      })
-    } else{
-      res.render('Index', {products: allProducts})
-    }
-  })
-});
-
 //new
-app.get('/underthesea/new', (req, res) => {
-  res.render('New');
-  });
-
 //deletes
 //update
 //create
-app.post('/underthesea', (req, res) =>{
-  Product.create(req.body, (err, createdProduct) => {
-    if(err){
-      res.status(404).send({
-        msg: err.message
-      })
-    } else {
-      console.log(createdProduct);
-      res.redirect('/underthesea');
-    };
-  });
-});
 //edit
 //show
-app.get('/underthesea/:id', (req, res) => {
-  Product.findById(req.params.id, (err, foundProduct)=>{
-    if(err){
-      res.status(404).send({
-          msg: err.message
-      })
-    } else {
-      res.render('Show', {product: foundProduct});
-    };
-  });
-});
+
 
 //tell app to listen on port 3000 for HTTP requests from clients
 app.listen(PORT, () => {
