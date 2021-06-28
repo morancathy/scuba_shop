@@ -15,9 +15,9 @@ class New extends React.Component{
         <h4>Image:</h4>
           <input type="text" name="image" /><br/>
         <h4>Price:</h4>
-          <input type="number" placeholder="0.00" step="0.01" min="0" max="10" name="price" /><br/>
+          <input type="number" placeholder="0.00" step="0.01" min="0" name="price" /><br/>
         <h4>Quantity:</h4>
-          <input type="number" name="qty" /><br/>
+          <input type="number" min="0" name="qty" /><br/>
         <input id="submit" type="submit" name="" value="Submit" /><br/>
         </form>
       </DefaultLayout>

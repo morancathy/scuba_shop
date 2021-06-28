@@ -26,7 +26,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 app.use('/underthesea', require('./controllers/routeController.js')); //main routes
-// app.use('/user', require('./controllers/userRouteController.js'))   //shopping cart routes
+app.use('/underthesean/user', require('./controllers/userRouteController.js'))   //shopping cart routes
 
 
 //   try {

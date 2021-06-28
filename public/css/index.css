@@ -1,3 +1,77 @@
-.imgTag  {
-  width: 200px;
+.introDiv {
+  border: solid black;
+  height: 150px;
+  text-align: center;
+  margin: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.cartLink {
+
+
+}
+
+.createLink {
+
+}
+
+.h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.h2 {
+  margin-top: 2px;
+}
+
+.introP {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mainDiv {
+  border: solid yellow;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 25px;
+  margin: 20px;
+
+}
+
+.productDiv {
+    border: solid black;
+    padding: 10px;
+    width: 30%;
+    max-width: 200px;
+    max-height: 300px;
+    text-align: center;
+    margin: 15px;
+}
+
+.imgTag {
+  width: 80%;
+
+}
+
+.div2Tag {
+    border: solid black;
+    margin: 20px;
+    /* padding: 5px;
+    width: 33%;
+    text-align: center; */
+}
+.div3Tag {
+    border: solid black;
+    margin: 20px;
+    /* padding: 5px;
+    width: 33%;
+    text-align: center; */
 }

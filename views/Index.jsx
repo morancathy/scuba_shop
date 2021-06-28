@@ -5,26 +5,37 @@ class Index extends React.Component {
   render(){
     return (
       <DefaultLayout
-      title={"Products"}
+      // title={"Products"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
-        <nav className="newProductLink">
-          <a href="/underthesea/new">Create New Product</a>
-        </nav>
-        <ul>
+        <div className="introDiv">
+          <nav className="nav">
+            <a className="createLink" href="/underthesea/new">Create New Product</a><a className="cartLink" href="/underthesea">Cart</a>
+          </nav>
+          <h1 className="h1">Under the Sea</h1>
+          <h2 className="h2">Dive Shop</h2>
+          <p className="introP">Your neighboorhood Chicago-land dive shop. We've been in buisness for over 3 days! We offer
+          nothing but the best quality, prices and customer service.</p>
+        </div>
+        <div className="mainDiv">
           {
             this.props.products.map((product)=>{
               return (
-                <li key={product._id}>
-                  The <a href={`/underthesea/${product._id}`}>{product.name}</a>
+                <div className="productDiv" key={product._id}>
+                  <a href={`/underthesea/${product._id}`}>{product.name}</a>
                   <p>{product.description}</p>
                   <img className="imgTag" src={product.img} alt="Product Image"/>
-                  <p>Price: {product.price}</p>
-                  <p>Quanity: {product.qty}</p>
-                </li>
+                  <p>Price: ${product.price}</p>
+                </div>
               )
             })
           }
-        </ul>
+        </div>
+        <div className="div2Tag">
+          <h1>what does this do</h1>
+        </div>
+        <div className="div3Tag">
+          <h1>Join Us!  Next excusion....El Nido, Philippines!</h1>
+        </div>
       </DefaultLayout>
     )
   }

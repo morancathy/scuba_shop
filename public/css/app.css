@@ -1,5 +1,15 @@
 body {
+  display: grid;
   margin: 10px;
   padding: 20px;
   background-color: lightblue;
+  border: solid purple;
+}
+
+/* header {
+  border: solid red;
+} */
+
+footer{
+  border: solid red;
 }

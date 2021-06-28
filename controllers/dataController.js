@@ -54,6 +54,23 @@ const dataController = {
   },
 
   update(req, res, next){
+    // req.body.buyButton === 'clicked'
+    //   ? {$inc : {'res.locals.data.product.qty' : -1}}
+    //   : console.log("dkfasodfkapsdnfks")
+
+    Product.findByIdAndUpdate(req.params.id, {$inc:{'req.params.id.qty' : 1}}, {new: true}, (err, updatedQty) => {
+      if(err) {
+        res.status(404).send({
+          msg: err.message
+        })
+      } else {
+        req.params.id.qty = req.params.id.qty - 1;
+        console.log("This product quantity: ", req.params.id);
+        //Cart.
+      }
+    })
+
+
     Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedProduct) => {
       if(err) {
         res.status(404).send({
@@ -61,6 +78,7 @@ const dataController = {
         })
       } else {
         res.locals.data.product = updatedProduct;
+        console.log("This product quantity: ", res.locals.data.product);
         next();
       }
     })
