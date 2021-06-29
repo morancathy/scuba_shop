@@ -43,7 +43,7 @@ app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
 //     res.send(err.message)
 //   }
 app.get('/booties/seed/', (req, res) => {
-  Fin.create([
+  Bootie.create([
       {
         name: 'Booties',
         description: 'A small pile of beans. Buy more beans for a big pile of beans.',
@@ -72,13 +72,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/booties', (req, res) => {
-  Bootie.find({}, (err, allFins)=>{
+  Bootie.find({}, (err, allBooties)=>{
   if(err){
     res.status(404).send({
         msg: err.message
     })
   } else {
-    res.render('FinIndex', {fins: allFins})
+    res.render('BootieIndex', {booties: allBooties})
     };
   });
 });
