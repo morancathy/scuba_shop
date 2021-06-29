@@ -36,7 +36,7 @@ class Index extends React.Component {
         <div className="div3Tag">
           <h1>Join Us!  Next excusion....El Nido, Philippines!</h1>
         </div>
-        <footer><div>never stop exploring</div><div>© diesel 2021 </div></footer>
+        <footer><div className="footDiv">~ never stop exploring ~</div><div>© diesel 2021 </div></footer>
       </DefaultLayout>
     )
   }

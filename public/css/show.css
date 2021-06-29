@@ -1,4 +1,4 @@
-div {
+.showDiv {
 color: #ffffff;
 background-color: #FF69B4;
 text-align: center;
@@ -7,6 +7,15 @@ width: auto;
 padding: 15px;
 border: solid yellow;
 }
+
+nav {
+  text-align: left;
+  margin-left: 0px;
+}
+.editTag{
+
+}
+
 
 p {
   font-size: 22px;
