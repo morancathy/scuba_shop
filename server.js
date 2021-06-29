@@ -59,6 +59,12 @@ app.get('/bcds/seed/', (req, res) => {
         qty: 0
       }, {
         name: 'bcds',
+        description: 'product product product',
+        img: 'http://bluelips.com/prod_images_large/bones1.jpg',
+        price: 25,
+        qty: 0
+      }, {
+        name: 'bcds',
         description: 'A stack of colorful bins for your beans and bones.',
         img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
         price: 7000,
