@@ -18,8 +18,7 @@ class DefaultLayout extends React.Component {
             <h1>{this.props.title}</h1>
             {this.props.children}
             </div>
-          </body>
-          <footer>This is footer</footer>
+          </body>          
       </html>
     )
   }
