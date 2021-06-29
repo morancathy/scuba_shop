@@ -7,7 +7,7 @@ class MaskEdit extends React.Component {
       <DefaultLayout
       title={"Edit Mask"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/edit.css'}]}>
-        <form action={`/mask/${this.props.mask._id}?_method=PUT`} method="POST">
+        <form action={`/masks/${this.props.mask._id}?_method=PUT`} method="POST">
           <h4>Name:</h4>
             <input type="text" name="name" defaultValue={this.props.mask.name}/><br/>
           <h4>Description:</h4>
@@ -19,9 +19,9 @@ class MaskEdit extends React.Component {
           <h4>Quantity:</h4>
             <input type="number" name="qty" min="0" defaultValue={this.props.mask.qty}/><br/><br/><br/>
           <input id="submit" type="submit" name="" value="Submit edits" /><br/><br/>
-          <form id="deleteBut" method="POST" action={`/underthesea/${this.props.mask._id}?_method=DELETE`}>
-            <input type="submit" value="Delete Mask"/>
-          </form>
+        </form>
+        <form id="deleteBut" method="POST" action={`/masks/${this.props.mask._id}?_method=DELETE`}>
+          <input type="submit" value="Delete Mask"/>
         </form>
       </DefaultLayout>
     )

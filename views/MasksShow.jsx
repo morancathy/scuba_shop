@@ -7,7 +7,7 @@ class MaskShow extends React.Component {
       <DefaultLayout
       title={this.props.mask.title}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
-        <p>mask: {this.props.mask.name} </p>
+        <p>Product: {this.props.mask.name} </p>
         <p>{this.props.mask.description}</p>
         <img id="imgTag" src={this.props.mask.img} alt="Mask Image"/>
         <p>Price: ${this.props.mask.price}</p>

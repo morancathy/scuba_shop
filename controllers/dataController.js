@@ -48,6 +48,7 @@ const dataController = {
         })
       } else{
         res.locals.data.product = deletedProduct;
+        console.log('deleted product ', deletedProduct)
         next();
       }
     })

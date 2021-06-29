@@ -3,6 +3,9 @@ const maskrouter = express.Router();
 const maskViewController = require('./maskViewController');
 const maskDataController = require('./maskDataController');
 
+const methodOverride = require('method-override');
+maskrouter.use(methodOverride('_method'));
+
 // INDEX
 maskrouter.get('/', maskDataController.index, maskViewController.index);
 

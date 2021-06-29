@@ -58,17 +58,17 @@ const maskDataController = {
     //   ? {$inc : {'res.locals.data.Mask.qty' : -1}}
     //   : console.log("dkfasodfkapsdnfks")
 
-    Mask.findByIdAndUpdate(req.params.id, {$inc:{'req.params.id.qty' : 1}}, {new: true}, (err, updatedQty) => {
-      if(err) {
-        res.status(404).send({
-          msg: err.message
-        })
-      } else {
-        req.params.id.qty = req.params.id.qty - 1;
-        console.log("This Mask quantity: ", req.params.id);
-        //Cart.
-      }
-    })
+    // Mask.findByIdAndUpdate(req.params.id, {$inc:{'req.params.id.qty' : 1}}, {new: true}, (err, updatedQty) => {
+    //   if(err) {
+    //     res.status(404).send({
+    //       msg: err.message
+    //     })
+    //   } else {
+    //     req.params.id.qty = req.params.id.qty - 1;
+    //     console.log("This Mask quantity: ", req.params.id);
+    //     //Cart.
+    //   }
+    // })
 
 
     Mask.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedMask) => {

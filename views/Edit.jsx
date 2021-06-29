@@ -19,9 +19,9 @@ class Edit extends React.Component {
           <h4>Quantity:</h4>
             <input type="number" name="qty" min="0" defaultValue={this.props.product.qty}/><br/><br/><br/>
           <input id="submit" type="submit" name="" value="Submit edits" /><br/><br/>
-          <form id="deleteBut" method="POST" action={`/underthesea/${this.props.product._id}?_method=DELETE`}>
-            <input type="submit" value="Delete product"/>
-          </form>
+        </form>
+        <form id="deleteBut" method="POST" action={`/underthesea/${this.props.product._id}?_method=DELETE`}>
+          <input type="submit" value="Delete product"/>
         </form>
       </DefaultLayout>
     )

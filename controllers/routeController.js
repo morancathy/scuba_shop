@@ -3,6 +3,9 @@ const router = express.Router();
 const viewController = require('./viewController');
 const dataController = require('./dataController');
 
+const methodOverride = require('method-override');
+router.use(methodOverride('_method'));
+
 // INDEX
 router.get('/', dataController.index, viewController.index);
 
