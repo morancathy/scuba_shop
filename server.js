@@ -7,6 +7,7 @@ const Product = require('./models/product.js');  //will eventually delete
 const Mask = require('./models/masks.js');
 const Fin = require('./models/fin.js');
 const Bootie = require('./models/bootie.js');
+const Bcd = require('./models/bcd.js');
 
 // Set Up Data
 const db = require('./models/db');
