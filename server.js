@@ -79,9 +79,9 @@ app.get('/fins', (req, res) => {
         msg: err.message
     })
   } else {
-  res.render('FinIndex', {fins: allFins})
-};
-});
+    res.render('FinIndex', {fins: allFins})
+    };
+  });
 });
 
 //new
@@ -90,6 +90,17 @@ app.get('/fins', (req, res) => {
 //create
 //edit
 //show
+app.get('/fins/:id', (req, res) => {
+  Fin.findById(req.params.id, (err, foundFin)=>{
+    if(err){
+      res.status(404).send({
+          msg: err.message
+      })
+    } else {
+      res.render('FinShow', {fin: foundFin});
+    };
+  });
+});
 
 
 //tell app to listen on port 3000 for HTTP requests from clients
