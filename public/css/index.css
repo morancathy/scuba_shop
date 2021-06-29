@@ -1,25 +1,30 @@
 .introDiv {
   border: solid black;
-  height: 150px;
+  width: auto;
   text-align: center;
   margin: 20px;
 }
 
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-size: 18px;
+    padding-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .cartLink {
+  margin-left: 10px;
 
-
+}
+.backLink {
+  margin-right: 10px;
 }
 
 .createLink {
-
+position: relative;
 }
 
 .h1 {
