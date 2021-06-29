@@ -80,3 +80,7 @@ position: relative;
     width: 33%;
     text-align: center; */
 }
+
+.footDiv {
+  font-style: italic;
+}
