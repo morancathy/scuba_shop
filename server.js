@@ -34,7 +34,7 @@ app.use('/underthesea/user', require('./controllers/userRouteController.js'))   
 app.use('/masks', require('./controllers/maskRouteController.js'))  //mask routes
 app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
 app.use('/booties', require('./controllers/bootieRouteController.js'))  //booties routes
-// app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
+app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
 // app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
 
 //   try {
@@ -59,12 +59,6 @@ app.get('/bcds/seed/', (req, res) => {
         qty: 0
       }, {
         name: 'bcds',
-        description: 'product product product',
-        img: 'http://bluelips.com/prod_images_large/bones1.jpg',
-        price: 25,
-        qty: 0
-      }, {
-        name: 'bcds',
         description: 'A stack of colorful bins for your beans and bones.',
         img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
         price: 7000,
@@ -78,18 +72,18 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-app.get('/bcds', (req, res) => {
-  console.log(Bcd)
-  Bcd.find({}, (err, allBcds)=>{
-  if(err){
-    res.status(404).send({
-        msg: err.message
-    })
-  } else {
-    res.render('BcdIndex', {bcds: allBcds})
-    };
-  });
-});
+// app.get('/bcds', (req, res) => {
+//   console.log(Bcd)
+//   Bcd.find({}, (err, allBcds)=>{
+//   if(err){
+//     res.status(404).send({
+//         msg: err.message
+//     })
+//   } else {
+//     res.render('BcdIndex', {bcds: allBcds})
+//     };
+//   });
+// });
 
 //new
 //deletes
