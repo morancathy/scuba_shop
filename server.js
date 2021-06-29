@@ -30,7 +30,7 @@ app.use(express.static('public'));
 app.use('/underthesea', require('./controllers/routeController.js')); //main routes
 app.use('/underthesea/user', require('./controllers/userRouteController.js'))   //shopping cart routes
 app.use('/masks', require('./controllers/maskRouteController.js'))  //mask routes
-// app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
+app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
 // app.use('/booties', require('./controllers/bootieRouteController.js'))  //booties routes
 // app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
 // app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
@@ -71,18 +71,18 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-app.get('/fins', (req, res) => {
-  console.log(Fin)
-  Fin.find({}, (err, allFins)=>{
-  if(err){
-    res.status(404).send({
-        msg: err.message
-    })
-  } else {
-    res.render('FinIndex', {fins: allFins})
-    };
-  });
-});
+// app.get('/fins', (req, res) => {
+//   console.log(Fin)
+//   Fin.find({}, (err, allFins)=>{
+//   if(err){
+//     res.status(404).send({
+//         msg: err.message
+//     })
+//   } else {
+//     res.render('FinIndex', {fins: allFins})
+//     };
+//   });
+// });
 
 //new
 //deletes
@@ -90,17 +90,17 @@ app.get('/fins', (req, res) => {
 //create
 //edit
 //show
-app.get('/fins/:id', (req, res) => {
-  Fin.findById(req.params.id, (err, foundFin)=>{
-    if(err){
-      res.status(404).send({
-          msg: err.message
-      })
-    } else {
-      res.render('FinShow', {fin: foundFin});
-    };
-  });
-});
+// app.get('/fins/:id', (req, res) => {
+//   Fin.findById(req.params.id, (err, foundFin)=>{
+//     if(err){
+//       res.status(404).send({
+//           msg: err.message
+//       })
+//     } else {
+//       res.render('FinShow', {fin: foundFin});
+//     };
+//   });
+// });
 
 
 //tell app to listen on port 3000 for HTTP requests from clients

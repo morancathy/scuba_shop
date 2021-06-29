@@ -19,7 +19,7 @@ class FinIndex extends React.Component {
         </div>
         <div className="mainDiv">
           {
-            this.props.fins.map((fin)=>{
+            this.props.fins.map((fin)=>{              
               return (
                 <div className="productDiv" key={fin._id}>
                   <a href={`/fins/${fin._id}`}>{fin.name}</a>

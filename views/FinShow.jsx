@@ -7,7 +7,6 @@ class FinShow extends React.Component {
       <DefaultLayout
       title={this.props.fin.title}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
-      {console.log(this.props.fin.name)}
         <p>Product: {this.props.fin.name} </p>
         <p>{this.props.fin.description}</p>
         <img id="imgTag" src={this.props.fin.img} alt="Fin Image"/>
