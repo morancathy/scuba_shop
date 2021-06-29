@@ -31,10 +31,10 @@ class Index extends React.Component {
           }
         </div>
         <div className="div2Tag">
-          <h1>what does this do</h1>
+          <h1>Another section to add things?</h1>
         </div>
         <div className="div3Tag">
-          <h1>Join Us!  Next excusion....El Nido, Philippines!</h1>
+          <h1>Another section to add things?</h1>
         </div>
         <footer><div className="footDiv">~ never stop exploring ~</div><div>© diesel 2021 </div></footer>
       </DefaultLayout>
