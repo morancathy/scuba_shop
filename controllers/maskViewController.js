@@ -3,7 +3,7 @@ const RESOURCE_PATH = '/masks';
 const maskViewController = {
 
   new(req, res, next){
-    res.render('New')
+    res.render('MaskNew')
   },
 
   index(req, res, next){
@@ -15,7 +15,7 @@ const maskViewController = {
   },
 
   edit(req, res, next){
-    res.render('Edit', {mask: res.locals.data.mask})
+    res.render('MaskEdit', {mask: res.locals.data.mask})
   },
 
   redirectHome(req, res, next){
