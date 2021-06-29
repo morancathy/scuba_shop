@@ -21,7 +21,7 @@ class Index extends React.Component {
             this.props.products.map((product)=>{
               return (
                 <div className="productDiv" key={product._id}>
-                  <a href={`/${(product.name.charAt(0).toLowerCase() + product.name.slice(1))}`}>{product.name}</a>
+                <a href={`/${(product.name.toLowerCase())}`}>{product.name}</a>
                   <p>{product.description}</p>
                   <img className="imgTag" src={product.img} alt="Product Image"/>
                   <p>Price: ${product.price}</p>
