@@ -13,12 +13,12 @@ class MaskShow extends React.Component {
         <p>Price: ${this.props.mask.price}</p>
         <p>{this.props.mask.qty} left in stock</p>
 
-        <form action={`/underthesea/masks/${this.props.mask._id}?_method=PUT`} method="POST">
+        <form action={`/masks/${this.props.mask._id}?_method=PUT`} method="POST">
             <input className="buyButton" name="buyButton" type="submit" value="Buy"/>
         </form>
 
-        <a href={`/underthesea/masks/${this.props.mask._id}/edit`}>Edit this mask</a>
-        <a id="backLink" href="/underthesea/masks">Back to masks</a>
+        <a href={`/masks/${this.props.mask._id}/edit`}>Edit this mask</a>
+        <a id="backLink" href="/masks">Back to masks</a>
       </DefaultLayout>
     )
   }

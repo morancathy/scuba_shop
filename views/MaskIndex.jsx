@@ -23,7 +23,6 @@ class MaskIndex extends React.Component {
                 <div className="productDiv" key={mask._id}>
                   <a href={`/masks/${mask._id}`}>{mask.name}</a>
                   <p>{mask.description}</p>
-                  <a href="/masks">Masks Index Page</a>
                   <img className="imgTag" src={mask.img} alt="Mask Image"/>
                   <p>Price: ${mask.price}</p>
                 </div>
