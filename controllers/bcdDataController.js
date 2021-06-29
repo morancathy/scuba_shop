@@ -34,7 +34,7 @@ const bcdDataController = {
           msg: err.message
         })
       } else {
-        res.locals.data.bcd = createdbcd;
+        res.locals.data.bcd = createdBcd;
         next();
       };
     });
