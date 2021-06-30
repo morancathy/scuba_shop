@@ -21,6 +21,9 @@ bcdrouter.put('/:id', bcdDataController.update, bcdViewController.redirectShow);
 // CREATE
 bcdrouter.post('/', bcdDataController.create, bcdViewController.redirectHome);
 
+//BUY
+bcdrouter.get('/:id/buy', bcdDataController.buy, bcdViewController.redirectShow);
+
 // EDIT
 bcdrouter.get('/:id/edit', bcdDataController.show, bcdViewController.edit);
 

@@ -21,10 +21,16 @@ maskrouter.put('/:id', maskDataController.update, maskViewController.redirectSho
 // CREATE
 maskrouter.post('/', maskDataController.create, maskViewController.redirectHome);
 
+//BUY
+maskrouter.get('/:id/buy', maskDataController.buy, maskViewController.redirectShow);
+
 // EDIT
 maskrouter.get('/:id/edit', maskDataController.show, maskViewController.edit);
 
 // SHOW
 maskrouter.get('/:id', maskDataController.show, maskViewController.show);
+
+
+
 
 module.exports = maskrouter;

@@ -54,23 +54,6 @@ const finDataController = {
   },
 
   update(req, res, next){
-    req.body.buyButton === 'clicked'
-      ? {$inc : {'res.locals.data.fin.qty' : -1}}
-      : console.log("dkfasodfkapsdnfks")
-
-    Fin.findByIdAndUpdate(req.params.id, {$inc:{'req.params.id.qty' : 1}}, {new: true}, (err, updatedQty) => {
-      if(err) {
-        res.status(404).send({
-          msg: err.message
-        })
-      } else {
-        req.params.id.qty = req.params.id.qty - 1;
-        console.log("This Fin quantity: ", req.params.id);
-        //Cart.
-      }
-    })
-
-
     Fin.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedFin) => {
       if(err) {
         res.status(404).send({
@@ -82,7 +65,20 @@ const finDataController = {
         next();
       }
     })
-  }
+  },
+
+  buy(req, res, next){
+      Fin.findByIdAndUpdate(req.params.id, { $inc: {qty: -1} }, (err, updatedQty)=>{
+        if(err){
+          res.status(404).send({
+            msg: err.message
+          })
+        } else {
+          res.locals.data.qty = updatedQty
+          next();
+        }
+      })
+    }
 };
 
 module.exports = finDataController;

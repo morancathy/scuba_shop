@@ -54,23 +54,6 @@ const bootieDataController = {
   },
 
   update(req, res, next){
-    req.body.buyButton === 'clicked'
-      ? {$inc : {'res.locals.data.bootie.qty' : -1}}
-      : console.log("dkfasodfkapsdnfks")
-
-    Bootie.findByIdAndUpdate(req.params.id, {$inc:{'req.params.id.qty' : 1}}, {new: true}, (err, updatedQty) => {
-      if(err) {
-        res.status(404).send({
-          msg: err.message
-        })
-      } else {
-        req.params.id.qty = req.params.id.qty - 1;
-        console.log("This Bootie quantity: ", req.params.id);
-        //Cart.
-      }
-    })
-
-
     Bootie.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedBootie) => {
       if(err) {
         res.status(404).send({
@@ -82,7 +65,20 @@ const bootieDataController = {
         next();
       }
     })
-  }
+  },
+
+  buy(req, res, next){
+      Bootie.findByIdAndUpdate(req.params.id, { $inc: {qty: -1} }, (err, updatedQty)=>{
+        if(err){
+          res.status(404).send({
+            msg: err.message
+          })
+        } else {
+          res.locals.data.qty = updatedQty
+          next();
+        }
+      })
+    }
 };
 
 module.exports = bootieDataController;

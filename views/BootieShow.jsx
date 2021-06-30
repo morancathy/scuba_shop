@@ -3,6 +3,22 @@ const DefaultLayout = require('./layouts/Default');
 
 class BootieShow extends React.Component {
   render() {
+    const buyButton = () => {
+            if (this.props.bootie.qty > 0) {
+                return(
+                    <>
+                        <p>{this.props.bootie.qty} left in stock</p>
+                        <form action={`/booties/${this.props.bootie._id}/buy`}>
+                        <input type="submit" value="BUY"/>
+                        </form>
+                    </>
+                )
+            }else {
+                return (
+                    <p>OUT OF STOCK!</p>
+                )
+            }
+        }
     return(
       <DefaultLayout
       title={this.props.bootie.title}
@@ -15,11 +31,7 @@ class BootieShow extends React.Component {
         <p>{this.props.bootie.description}</p>
         <img id="imgTag" src={this.props.bootie.img} alt="bootie Image"/>
         <p>Price: ${this.props.bootie.price}</p>
-        <p>{this.props.bootie.qty} left in stock</p>
-
-        <form action={`/booties/${this.props.bootie._id}?_method=PUT`} method="POST">
-            <input className="buyButton" name="buyButton" type="submit" value="Buy"/>
-        </form>
+        {buyButton()}<br/>
         <a id="backLink" href="/booties">Back to booties</a>
       </div>
       </DefaultLayout>
