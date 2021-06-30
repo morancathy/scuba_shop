@@ -8,7 +8,7 @@ const Mask = require('./models/masks.js');
 const Fin = require('./models/fin.js');
 const Bootie = require('./models/bootie.js');
 const Bcd = require('./models/bcd.js');
-const Regulator = require('./models/.regulator.js');
+const Regulator = require('./models/regulator.js');
 
 // Set Up Data
 const db = require('./models/db');
@@ -44,22 +44,22 @@ app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
 //   } catch (err) {
 //     res.send(err.message)
 //   }
-app.get('/bcds/seed/', (req, res) => {
-  Bcd.create([
+app.get('/regulators/seed/', (req, res) => {
+  Regulator.create([
       {
-        name: 'bcds',
+        name: 'regulators',
         description: 'A small pile of beans. Buy more beans for a big pile of beans.',
         img: 'https://cdn3.bigcommerce.com/s-a6pgxdjc7w/products/1075/images/967/416130__50605.1467418920.1280.1280.jpg?c=2',
         price: 5,
         qty: 99
       }, {
-        name: 'bcds',
+        name: 'regulators',
         description: 'It\'s just a bag of bones.',
         img: 'http://bluelips.com/prod_images_large/bones1.jpg',
         price: 25,
         qty: 0
       }, {
-        name: 'bcds',
+        name: 'regulators',
         description: 'A stack of colorful bins for your beans and bones.',
         img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
         price: 7000,
@@ -73,18 +73,17 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-// app.get('/bcds', (req, res) => {
-//   console.log(Bcd)
-//   Bcd.find({}, (err, allBcds)=>{
-//   if(err){
-//     res.status(404).send({
-//         msg: err.message
-//     })
-//   } else {
-//     res.render('BcdIndex', {bcds: allBcds})
-//     };
-//   });
-// });
+app.get('/regulators', (req, res) => {
+  Regulator.find({}, (err, allRegulators)=>{
+  if(err){
+    res.status(404).send({
+        msg: err.message
+    })
+  } else {
+    res.render('RegulatorIndex', {regulators: allRegulators})
+    };
+  });
+});
 
 //new
 //deletes
