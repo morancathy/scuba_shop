@@ -61,7 +61,6 @@ const maskDataController = {
         })
       } else {
         res.locals.data.mask = updatedMask;
-        console.log("This Mask quantity: ", res.locals.data.mask);
         next();
       }
     })

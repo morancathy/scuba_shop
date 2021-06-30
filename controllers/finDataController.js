@@ -61,7 +61,6 @@ const finDataController = {
         })
       } else {
         res.locals.data.Fin = updatedFin;
-        console.log("This Fin quantity: ", res.locals.data.Fin);
         next();
       }
     })

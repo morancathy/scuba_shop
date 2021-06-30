@@ -61,7 +61,6 @@ const bootieDataController = {
         })
       } else {
         res.locals.data.Bootie = updatedBootie;
-        console.log("This Bin quantity: ", res.locals.data.Bootie);
         next();
       }
     })

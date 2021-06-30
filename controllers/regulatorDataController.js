@@ -1,73 +1,73 @@
-const Bcd = require('../models/bcd.js');
+const Regulator = require('../models/regulator.js');
 
-const bcdDataController = {
+const regulatorDataController = {
   index(req, res, next){
-    Bcd.find({}, (err, allBcds) => {
+    Regulator.find({}, (err, allRegulators) => {
       if(err){
         res.status(404).send({
           msg: err.message
         })
       } else{
-        res.locals.data.bcds = allBcds;
+        res.locals.data.regulators = allRegulators;
         next();
       }
     })
   },
 
   show(req, res, next){
-    Bcd.findById(req.params.id, (err, foundBcd)=>{
+    Regulator.findById(req.params.id, (err, foundRegulator)=>{
       if(err){
         res.status(404).send({
             msg: err.message
         })
       } else {
-        res.locals.data.bcd = foundBcd;
+        res.locals.data.regulator = foundRegulator;
         next();
       }
     })
   },
 
   create(req, res, next){
-    Bcd.create(req.body, (err, createdBcd) => {
+    Regulator.create(req.body, (err, createdRegulator) => {
       if(err){
         res.status(404).send({
           msg: err.message
         })
       } else {
-        res.locals.data.bcd = createdBcd;
+        res.locals.data.regulator = createdRegulator;
         next();
       };
     });
   },
 
   destroy(req, res, next){
-    Bcd.findByIdAndDelete(req.params.id, (err, deletedBcd) => {
+    Regulator.findByIdAndDelete(req.params.id, (err, deletedRegulator) => {
       if(err){
         res.status(404).send({
           msg: err.message
         })
       } else{
-        res.locals.data.bcd = deletedBcd;
+        res.locals.data.regulator = deletedRegulator;
         next();
       }
     })
   },
 
   update(req, res, next){
-    Bcd.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedBcd) => {
+    Regulator.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedRegulator) => {
       if(err) {
         res.status(404).send({
           msg: err.message
         })
       } else {
-        res.locals.data.bcd = updatedBcd;
+        res.locals.data.regulator = updatedRegulator;
         next();
       }
     })
   },
 
   buy(req, res, next){
-      Bcd.findByIdAndUpdate(req.params.id, { $inc: {qty: -1} }, (err, updatedQty)=>{
+      Regulator.findByIdAndUpdate(req.params.id, { $inc: {qty: -1} }, (err, updatedQty)=>{
         if(err){
           res.status(404).send({
             msg: err.message
@@ -80,4 +80,4 @@ const bcdDataController = {
     }
 };
 
-module.exports = bcdDataController;
+module.exports = regulatorDataController;
