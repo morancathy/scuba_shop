@@ -24,6 +24,10 @@ const finViewController = {
 
   redirectShow(req, res, next){
     res.redirect(RESOURCE_PATH + `/${req.params.id}`)
+  },
+
+  redirectCart(req, res, next){
+    res.redirect('/cart')
   }
 };
 

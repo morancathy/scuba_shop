@@ -9,8 +9,8 @@ class FinIndex extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
           <nav className="nav">
+            <a className="backLink" href="/underthesea">Back to Main Shop</a>
             <a className="createLink" href="/fins/new">Create New Product</a>
-            <a className="backLink" href="/underthesea">back to home page</a>
             <a className="cartLink" href="/fins">Cart</a>
           </nav>
           <h1 className="h1">Under the Sea</h1>
@@ -19,7 +19,7 @@ class FinIndex extends React.Component {
         </div>
         <div className="mainDiv">
           {
-            this.props.fins.map((fin)=>{              
+            this.props.fins.map((fin)=>{
               return (
                 <div className="productDiv" key={fin._id}>
                   <a href={`/fins/${fin._id}`}>{fin.name}</a>

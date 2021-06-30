@@ -27,10 +27,10 @@ class FinShow extends React.Component {
         <nav>
           <a className="editTag" href={`/fins/${this.props.fin._id}/edit`}>Edit</a>
         </nav>
-        <p>Product: {this.props.fin.name} </p>
+        <p className="nameP">{this.props.fin.name} </p>
         <p>{this.props.fin.description}</p>
         <img id="imgTag" src={this.props.fin.img} alt="Fin Image"/>
-        <p>Price: ${this.props.fin.price}</p>
+        <p>${this.props.fin.price}</p>
         {buyButton()}<br/>
         <a id="backLink" href="/fins">Back to Fins</a>
       </div>

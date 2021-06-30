@@ -1,4 +1,5 @@
 const Fin = require('../models/fin.js');
+const Cart = require('../models/user.js');
 
 const finDataController = {
   index(req, res, next){
@@ -60,7 +61,7 @@ const finDataController = {
           msg: err.message
         })
       } else {
-        res.locals.data.Fin = updatedFin;
+        res.locals.data.fin = updatedFin;
         next();
       }
     })
@@ -74,10 +75,21 @@ const finDataController = {
           })
         } else {
           res.locals.data.qty = updatedQty
+          console.log(res.locals.data.qty);
           next();
         }
-      })
-    }
+      // Cart.create(req.body, (err, createdCartItem) => {
+      //   if(err){
+      //     res.status(404).send({
+      //       msg: err.message
+      //     })
+      //   } else {
+      //     res.locals.data.cart = createdCartItem;
+      //     next();
+      //   }
+      // })
+    })
+  }
 };
 
 module.exports = finDataController;

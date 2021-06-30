@@ -13,7 +13,7 @@ class BootieEdit extends React.Component {
           <h4>Description:</h4>
             <textarea rows="4" cols="50" name="description" defaultValue={this.props.bootie.description}/><br/>
           <h4>Image:</h4>
-            <input type="text" name="image" defaultValue={this.props.bootie.img}/><br/>
+            <input type="text" name="img" defaultValue={this.props.bootie.img}/><br/>
           <h4>Price:</h4>
             <input type="number" placeholder="0.00" step="0.01" min="0" name="price" defaultValue={this.props.bootie.price}/><br/>
           <h4>Quantity:</h4>

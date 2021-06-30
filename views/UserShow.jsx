@@ -10,6 +10,7 @@ class UserShow extends React.Component {
       <div className="showDiv">
         <p>User: {this.props.user.username} </p>
         <p>Cart: {this.props.user.shopping_cart} </p>
+        
         <a id="backtoshop" href="/underthesea">Back to dive shop</a>
       </div>
       </DefaultLayout>

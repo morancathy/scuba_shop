@@ -2,8 +2,8 @@
 color: #ffffff;
 background-color: #FF69B4;
 text-align: center;
-margin: 20px;
-width: auto;
+margin: 20px auto;
+width: 30%;
 padding: 15px;
 border: solid yellow;
 }
@@ -16,6 +16,11 @@ nav {
 
 }
 
+.nameP {
+  font-weight: bolder;
+  font-size: 35px;
+  color: black;
+}
 
 p {
   font-size: 22px;
