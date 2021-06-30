@@ -91,17 +91,17 @@ app.get('/regulators', (req, res) => {
 //create
 //edit
 //show
-// app.get('/booties/:id', (req, res) => {
-//   Bootie.findById(req.params.id, (err, foundBootie)=>{
-//     if(err){
-//       res.status(404).send({
-//           msg: err.message
-//       })
-//     } else {
-//       res.render('BootieShow', {bootie: foundBootie});
-//     };
-//   });
-// });
+app.get('/regulators/:id', (req, res) => {
+  Regulator.findById(req.params.id, (err, foundRegulator)=>{
+    if(err){
+      res.status(404).send({
+          msg: err.message
+      })
+    } else {
+      res.render('RegulatorShow', {regulator: foundRegulator});
+    };
+  });
+});
 
 
 //tell app to listen on port 3000 for HTTP requests from clients
