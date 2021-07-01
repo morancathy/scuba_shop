@@ -11,7 +11,7 @@ class BcdIndex extends React.Component {
           <nav className="nav">
             <a className="createLink" href="/bcds/new">Create New Product</a>
             <a className="backLink" href="/underthesea">back to home page</a>
-            <a className="cartLink" href="/bcds">Cart</a>
+            <a className="cartLink" href="/cart">Cart</a>
           </nav>
           <h1 className="h1">Under the Sea</h1>
           <h2 className="h2">Dive Shop</h2>

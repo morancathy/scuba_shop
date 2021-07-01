@@ -11,7 +11,7 @@ class FinIndex extends React.Component {
           <nav className="nav">
             <a className="backLink" href="/underthesea">Back to Main Shop</a>
             <a className="createLink" href="/fins/new">Create New Product</a>
-            <a className="cartLink" href="/fins">Cart</a>
+            <a className="cartLink" href="/cart">Cart</a>
           </nav>
           <h1 className="h1">Under the Sea</h1>
           <h2 className="h2">Dive Shop</h2>

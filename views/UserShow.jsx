@@ -3,7 +3,6 @@ const DefaultLayout = require('./layouts/Default');
 
 class UserShow extends React.Component {
   render() {
-    console.log(this.props.user.name)
     return(
       <DefaultLayout
       // title={this.props.user.title}
