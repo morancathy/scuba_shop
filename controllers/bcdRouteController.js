@@ -2,6 +2,8 @@ const express = require('express');
 const bcdrouter = express.Router();
 const bcdViewController = require('./bcdViewController');
 const bcdDataController = require('./bcdDataController');
+const userDataController = require('./userDataController');
+const userViewController = require('./userViewController');
 
 const methodOverride = require('method-override');
 bcdrouter.use(methodOverride('_method'));
@@ -22,7 +24,7 @@ bcdrouter.put('/:id', bcdDataController.update, bcdViewController.redirectShow);
 bcdrouter.post('/', bcdDataController.create, bcdViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
+bcdrouter.get('/:id/buy', bcdDataController.buy, userDataController.show, userViewController.show);
 
 // EDIT
 bcdrouter.get('/:id/edit', bcdDataController.show, bcdViewController.edit);

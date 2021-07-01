@@ -2,6 +2,8 @@ const express = require('express');
 const maskrouter = express.Router();
 const maskViewController = require('./maskViewController');
 const maskDataController = require('./maskDataController');
+const userDataController = require('./userDataController');
+const userViewController = require('./userViewController');
 
 const methodOverride = require('method-override');
 maskrouter.use(methodOverride('_method'));
@@ -22,7 +24,7 @@ maskrouter.put('/:id', maskDataController.update, maskViewController.redirectSho
 maskrouter.post('/', maskDataController.create, maskViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
+maskrouter.get('/:id/buy', maskDataController.buy, userDataController.show, userViewController.show);
 
 // EDIT
 maskrouter.get('/:id/edit', maskDataController.show, maskViewController.edit);

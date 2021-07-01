@@ -2,6 +2,8 @@ const express = require('express');
 const bootierouter = express.Router();
 const bootieViewController = require('./bootieViewController');
 const bootieDataController = require('./bootieDataController');
+const userDataController = require('./userDataController');
+const userViewController = require('./userViewController');
 
 const methodOverride = require('method-override');
 bootierouter.use(methodOverride('_method'));
@@ -22,7 +24,7 @@ bootierouter.put('/:id', bootieDataController.update, bootieViewController.redir
 bootierouter.post('/', bootieDataController.create, bootieViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
+bootierouter.get('/:id/buy', bootieDataController.buy, userDataController.show, userViewController.show);
 
 // EDIT
 bootierouter.get('/:id/edit', bootieDataController.show, bootieViewController.edit);

@@ -2,6 +2,8 @@ const express = require('express');
 const regulatorrouter = express.Router();
 const regulatorViewController = require('./regulatorViewController');
 const regulatorDataController = require('./regulatorDataController');
+const userDataController = require('./userDataController');
+const userViewController = require('./userViewController');
 
 const methodOverride = require('method-override');
 regulatorrouter.use(methodOverride('_method'));
@@ -22,7 +24,7 @@ regulatorrouter.put('/:id', regulatorDataController.update, regulatorViewControl
 regulatorrouter.post('/', regulatorDataController.create, regulatorViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
+regulatorrouter.get('/:id/buy', regulatorDataController.buy, userDataController.show, userViewController.show);
 
 // EDIT
 regulatorrouter.get('/:id/edit', regulatorDataController.show, regulatorViewController.edit);
