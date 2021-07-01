@@ -14,6 +14,11 @@ const finViewController = {
     res.render('FinShow', {fin: res.locals.data.fin})
   },
 
+  cartShow(req, res, next){
+    console.log('I am in finViewController')
+    res.render('UserShow', {user: res.locals.data.user})  
+  },
+
   edit(req, res, next){
     res.render('FinEdit', {fin: res.locals.data.fin})
   },
@@ -24,10 +29,6 @@ const finViewController = {
 
   redirectShow(req, res, next){
     res.redirect(RESOURCE_PATH + `/${req.params.id}`)
-  },
-
-  redirectCart(req, res, next){
-    res.redirect('/cart')
   }
 };
 

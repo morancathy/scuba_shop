@@ -76,18 +76,18 @@ const finDataController = {
         } else {
           res.locals.data.qty = updatedQty
           console.log(res.locals.data.qty);
+          // next();
+        }
+      Cart.create(req.body, (err, createdCartItem) => {
+        if(err){
+          res.status(404).send({
+            msg: err.message
+          })
+        } else {
+          res.locals.data.user = createdCartItem;
           next();
         }
-      // Cart.create(req.body, (err, createdCartItem) => {
-      //   if(err){
-      //     res.status(404).send({
-      //       msg: err.message
-      //     })
-      //   } else {
-      //     res.locals.data.cart = createdCartItem;
-      //     next();
-      //   }
-      // })
+      })
     })
   }
 };

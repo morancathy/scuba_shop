@@ -7,6 +7,7 @@ const userViewController = {
   // },
 
   cart(req, res, next){
+    console.log('I am in USERRRRR ViewController')
     res.render('UserShow')
   }
 

@@ -38,29 +38,20 @@ app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
 app.use('/booties', require('./controllers/bootieRouteController.js'))  //booties routes
 app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
 app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
-// app.use('/cart', require('./controllers/userRouteController.js')) 
+// app.use('/cart', require('./controllers/userRouteController.js'))
+
 // SEED route
 
-app.get('/fins/seed/', (req, res) => {
-  Fin.create([
+app.get('/cart/seed/', (req, res) => {
+  User.create([
       {
-        name: 'fin',
-        description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-        img: 'https://media.istockphoto.com/photos/scuba-diving-fins-flippers-picture-id171358712',
-        price: 5,
-        qty: 99
-      }, {
-        name: 'regulators',
-        description: 'It\'s just a bag of bones.',
-        img: 'http://bluelips.com/prod_images_large/bones1.jpg',
-        price: 25,
-        qty: 0
-      }, {
-        name: 'regulators',
+        username: 'Cathy',
+        shopping_cart: {
+        name: 'Bins',
         description: 'A stack of colorful bins for your beans and bones.',
         img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
         price: 7000,
-        qty: 1
+        qty: 1 }
       }], (err, data) =>{
           res.redirect('/underthesea');
       });
@@ -72,7 +63,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/cart', (req, res) => {
-  res.send('This works and is my cart')
+  res.send('This works and is my cart baby bAYba')
 });
 //
 // app.get('/regulators', (req, res) => {
