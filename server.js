@@ -9,7 +9,6 @@ const Fin = require('./models/fin.js');
 const Bootie = require('./models/bootie.js');
 const Bcd = require('./models/bcd.js');
 const Regulator = require('./models/regulator.js');
-const User = require('./models/user.js')
 
 // Set Up Data
 const db = require('./models/db');
@@ -62,9 +61,9 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-app.get('/cart', (req, res) => {
-  res.send('This works and is my cart baby bAYba')
-});
+// app.get('/cart', (req, res) => {
+//   res.send('This works and is my cart baby bAYba')
+// });
 //
 // app.get('/regulators', (req, res) => {
 //   Regulator.find({}, (err, allRegulators)=>{

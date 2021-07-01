@@ -9,8 +9,7 @@ userrouter.use(methodOverride('_method'));
 // INDEX
 
 // NEW
-userrouter.get('/cart', userViewController.cart)
-// userrouter.get('/new', userViewController.cart);
+
 // DELETE
 
 // UPDATE
@@ -20,6 +19,6 @@ userrouter.get('/cart', userViewController.cart)
 // EDIT
 
 // SHOW
-// userrouter.get('/:id', userDataController.show, userViewController.show);
+
 
 module.exports = userrouter;

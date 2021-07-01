@@ -2,6 +2,8 @@ const express = require('express');
 const finrouter = express.Router();
 const finViewController = require('./finViewController');
 const finDataController = require('./finDataController');
+const userDataController = require('./userDataController');
+const userViewController = require('./userViewController');
 
 const methodOverride = require('method-override');
 finrouter.use(methodOverride('_method'));
@@ -22,7 +24,7 @@ finrouter.put('/:id', finDataController.update, finViewController.redirectShow);
 finrouter.post('/', finDataController.create, finViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, finViewController.cartShow);
+finrouter.get('/:id/buy', finDataController.buy, userDataController.index, userViewController.show);
 
 // EDIT
 finrouter.get('/:id/edit', finDataController.show, finViewController.edit);
