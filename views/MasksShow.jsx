@@ -7,7 +7,7 @@ class MaskShow extends React.Component {
             if (this.props.mask.qty > 0) {
                 return(
                     <>
-                        <p>{this.props.mask.qty} left in stock</p>
+                        <p>{this.props.mask.qty} in stock</p>
                         <form action={`/masks/${this.props.mask._id}/buy`}>
                         <input type="submit" value="BUY"/>
                         </form>
@@ -25,14 +25,14 @@ class MaskShow extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
         <div className="showDiv">
           <nav>
-            <a className="editTag" href={`/masks/${this.props.mask._id}/edit`}>Edit this mask</a>
+            <a id="backLink" href="/masks">Back</a>
           </nav>
-          <p>Product: {this.props.mask.name} </p>
+          <p className="nameP">{this.props.mask.name} </p>
           <p>{this.props.mask.description}</p>
           <img id="imgTag" src={this.props.mask.img} alt="Mask Image"/>
-          <p>Price: ${this.props.mask.price}</p>
-        {buyButton()}<br/>
-          <a id="backLink" href="/masks">Back to masks</a>
+          <p>${this.props.mask.price}</p>
+        {buyButton()}<br/><br/>
+          <a className="editTag" href={`/masks/${this.props.mask._id}/edit`}>Edit Product</a>
         </div>
       </DefaultLayout>
     )

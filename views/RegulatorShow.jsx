@@ -7,7 +7,7 @@ class RegulatorShow extends React.Component {
             if (this.props.regulator.qty > 0) {
                 return(
                     <>
-                        <p>{this.props.regulator.qty} left in stock</p>
+                        <p>{this.props.regulator.qty} in stock</p>
                         <form action={`/regulators/${this.props.regulator._id}/buy`}>
                         <input type="submit" value="BUY"/>
                         </form>
@@ -25,14 +25,15 @@ class RegulatorShow extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
       <div className="showDiv">
         <nav>
-          <a className="editTag" href={`/regulators/${this.props.regulator._id}/edit`}>Edit</a>
+          <a id="backLink" href="/regulators">Back</a>
         </nav>
-        <p>Product: {this.props.regulator.name} </p>
+        <p className="nameP">{this.props.regulator.name} </p>
         <p>{this.props.regulator.description}</p>
         <img id="imgTag" src={this.props.regulator.img} alt="regulator Image"/>
-        <p>Price: ${this.props.regulator.price}</p>
-        {buyButton()}<br/>
-        <a id="backLink" href="/regulators">Back to Regulators</a>
+        <p>${this.props.regulator.price}</p>
+        {buyButton()}<br/><br/>
+        <a className="editTag" href={`/regulators/${this.props.regulator._id}/edit`}>Edit Product</a>
+
       </div>
       </DefaultLayout>
     )

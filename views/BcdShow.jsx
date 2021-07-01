@@ -7,7 +7,7 @@ class BcdShow extends React.Component {
             if (this.props.bcd.qty > 0) {
                 return(
                     <>
-                        <p>{this.props.bcd.qty} left in stock</p>
+                        <p>{this.props.bcd.qty} in stock</p>
                         <form action={`/bcds/${this.props.bcd._id}/buy`}>
                         <input type="submit" value="BUY"/>
                         </form>
@@ -25,14 +25,14 @@ class BcdShow extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
       <div className="showDiv">
         <nav>
-          <a className="editTag" href={`/bcds/${this.props.bcd._id}/edit`}>Edit</a>
+          <a id="backLink" href="/bcds">Back</a>
         </nav>
-        <p>Product: {this.props.bcd.name} </p>
+        <p className="nameP">{this.props.bcd.name} </p>
         <p>{this.props.bcd.description}</p>
         <img id="imgTag" src={this.props.bcd.img} alt="BCD Image"/>
-        <p>Price: ${this.props.bcd.price}</p>
-        {buyButton()}<br/>
-        <a id="backLink" href="/bcds">Back to BCDs</a>
+        <p>${this.props.bcd.price}</p>
+        {buyButton()}<br/><br/>
+        <a className="editTag" href={`/bcds/${this.props.bcd._id}/edit`}>Edit Product</a>
       </div>
       </DefaultLayout>
     )

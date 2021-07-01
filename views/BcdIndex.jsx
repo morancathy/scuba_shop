@@ -9,8 +9,8 @@ class BcdIndex extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
           <nav className="nav">
+            <a className="backLink" href="/underthesea">Back to Main Shop</a>
             <a className="createLink" href="/bcds/new">Create New Product</a>
-            <a className="backLink" href="/underthesea">back to home page</a>
             <a className="cartLink" href="/cart">Cart</a>
           </nav>
           <h1 className="h1">Under the Sea</h1>
@@ -25,7 +25,7 @@ class BcdIndex extends React.Component {
                   <a href={`/bcds/${bcd._id}`}>{bcd.name}</a>
                   <p>{bcd.description}</p>
                   <img className="imgTag" src={bcd.img} alt="bcd Image"/>
-                  <p>Price: ${bcd.price}</p>
+                  <p>${bcd.price}</p>
                 </div>
               )
             })
