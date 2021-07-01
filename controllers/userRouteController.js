@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 userrouter.use(methodOverride('_method'));
 
 // INDEX
+// userouter.get('/', inViewController.index);
 
 // NEW
 

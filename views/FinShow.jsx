@@ -21,7 +21,7 @@ class FinShow extends React.Component {
         }
     return(
       <DefaultLayout
-      title={this.props.fin.title}
+      // title={this.props.fin.product}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
       <div className="showDiv">
         <nav>

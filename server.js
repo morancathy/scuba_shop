@@ -9,6 +9,7 @@ const Fin = require('./models/fin.js');
 const Bootie = require('./models/bootie.js');
 const Bcd = require('./models/bcd.js');
 const Regulator = require('./models/regulator.js');
+const Cart = require('./models/user.js');
 
 // Set Up Data
 const db = require('./models/db');
@@ -42,15 +43,10 @@ app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //
 // SEED route
 
 app.get('/cart/seed/', (req, res) => {
-  User.create([
+  Cart.create([
       {
-        username: 'Cathy',
-        shopping_cart: {
-        name: 'Bins',
-        description: 'A stack of colorful bins for your beans and bones.',
-        img: 'http://www.clipartbest.com/cliparts/9cz/rMM/9czrMMBcE.jpeg',
-        price: 7000,
-        qty: 1 }
+        name: 'mask',
+        price: 2.56
       }], (err, data) =>{
           res.redirect('/underthesea');
       });
@@ -61,21 +57,18 @@ app.get('/', (req, res) => {
   res.send('This works')
 });
 
-// app.get('/cart', (req, res) => {
-//   res.send('This works and is my cart baby bAYba')
-// });
 //
-// app.get('/regulators', (req, res) => {
-//   Regulator.find({}, (err, allRegulators)=>{
-//   if(err){
-//     res.status(404).send({
-//         msg: err.message
-//     })
-//   } else {
-//     res.render('RegulatorIndex', {regulators: allRegulators})
-//     };
-//   });
-// });
+app.get('/cart', (req, res) => {
+  Cart.find({}, (err, allCartItems)=>{
+  if(err){
+    res.status(404).send({
+        msg: err.message
+    })
+  } else {
+    res.render('UserShow', {user: allCartItems})
+    };
+  });
+});
 
 //new
 //deletes
