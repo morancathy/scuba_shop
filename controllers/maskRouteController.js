@@ -22,7 +22,7 @@ maskrouter.put('/:id', maskDataController.update, maskViewController.redirectSho
 maskrouter.post('/', maskDataController.create, maskViewController.redirectHome);
 
 //BUY
-maskrouter.get('/:id/buy', maskDataController.buy, maskViewController.redirectShow);
+finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
 
 // EDIT
 maskrouter.get('/:id/edit', maskDataController.show, maskViewController.edit);
