@@ -1,4 +1,5 @@
 const Bcd = require('../models/bcd.js');
+const Cart = require('../models/user.js');
 
 const bcdDataController = {
   index(req, res, next){
@@ -74,10 +75,26 @@ const bcdDataController = {
           })
         } else {
           res.locals.data.qty = updatedQty
-          next();
+          const boughtProduct = {
+            product: updatedQty.product,
+            name: updatedQty.name,
+            img: updatedQty.img,
+            price: updatedQty.price
+          }
+
+          Cart.create(boughtProduct, (err, createdCartItem) => {
+            if(err){
+              res.status(404).send({
+                msg: err.message
+              })
+            } else {
+              res.locals.data.user = createdCartItem;
+              next();
+            }
+          })
         }
-      })
-    }
+    })
+  }
 };
 
 module.exports = bcdDataController;

@@ -1,4 +1,5 @@
 const Bootie = require('../models/bootie.js');
+const Cart = require('../models/user.js');
 
 const bootieDataController = {
   index(req, res, next){
@@ -74,10 +75,26 @@ const bootieDataController = {
           })
         } else {
           res.locals.data.qty = updatedQty
-          next();
+          const boughtProduct = {
+            product: updatedQty.product,
+            name: updatedQty.name,
+            img: updatedQty.img,
+            price: updatedQty.price
+          }
+
+          Cart.create(boughtProduct, (err, createdCartItem) => {
+            if(err){
+              res.status(404).send({
+                msg: err.message
+              })
+            } else {
+              res.locals.data.user = createdCartItem;
+              next();
+            }
+          })
         }
-      })
-    }
+    })
+  }
 };
 
 module.exports = bootieDataController;
