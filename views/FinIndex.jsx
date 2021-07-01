@@ -25,7 +25,7 @@ class FinIndex extends React.Component {
                   <a href={`/fins/${fin._id}`}>{fin.name}</a>
                   <p>{fin.description}</p>
                   <img className="imgTag" src={fin.img} alt="Fin Image"/>
-                  <p>Price: ${fin.price}</p>
+                  <p>${fin.price}</p>
                 </div>
               )
             })

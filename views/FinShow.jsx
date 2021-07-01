@@ -4,11 +4,11 @@ const DefaultLayout = require('./layouts/Default');
 class FinShow extends React.Component {
   render() {
     const buyButton = () => {
-            if (this.props.fin.qty > 0) {
+            if (this.props.collection.qty > 0) {
                 return(
                     <>
-                        <p>{this.props.fin.qty} left in stock</p>
-                        <form action={`/fins/${this.props.fin._id}/buy`}>
+                        <p>{`${this.props.collection.qty}`} in stock</p>
+                        <form action={`/${this.props.collection.product}/${this.props.collection._id}/buy`}>
                         <input type="submit" value="BUY"/>
                         </form>
                     </>
@@ -21,18 +21,18 @@ class FinShow extends React.Component {
         }
     return(
       <DefaultLayout
-      // title={this.props.fin.product}
+      // title={this.props.collection.product}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
       <div className="showDiv">
         <nav>
-          <a className="editTag" href={`/fins/${this.props.fin._id}/edit`}>Edit</a>
+          <a id="backLink" href={`/${this.props.collection.product}`}>Back</a>
         </nav>
-        <p className="nameP">{this.props.fin.name} </p>
-        <p>{this.props.fin.description}</p>
-        <img id="imgTag" src={this.props.fin.img} alt="Fin Image"/>
-        <p>${this.props.fin.price}</p>
-        {buyButton()}<br/>
-        <a id="backLink" href="/fins">Back to Fins</a>
+        <p className="nameP">{this.props.collection.name} </p>
+        <p>{this.props.collection.description}</p>
+        <img id="imgTag" src={this.props.collection.img} alt={this.props.collection.product} Image/>
+        <p>${this.props.collection.price}</p>
+        {buyButton()}<br/><br/>
+        <a className="editTag" href={`/${this.props.collection.product}/${this.props.collection._id}/edit`}>Edit Product</a>
       </div>
       </DefaultLayout>
     )

@@ -1,6 +1,7 @@
 const{Schema, model} = require('mongoose');
 
 const masksSchema = new Schema({
+  product: {type: String, required: true},
   name: {type: String, required: true},
   description: {type: String},
   img: {type: String},

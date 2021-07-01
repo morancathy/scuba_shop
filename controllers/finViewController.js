@@ -1,5 +1,7 @@
 const RESOURCE_PATH = '/fins';
 
+const collection = `fin`;
+
 const finViewController = {
 
   new(req, res, next){
@@ -11,7 +13,7 @@ const finViewController = {
   },
 
   show(req, res, next){
-    res.render('FinShow', {fin: res.locals.data.fin})
+    res.render('FinShow', {collection: res.locals.data.fin})
   },
 
   edit(req, res, next){

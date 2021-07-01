@@ -3,6 +3,7 @@ const DefaultLayout = require('./layouts/Default');
 
 class UserShow extends React.Component {
   render() {
+    console.log(`/${this.props.user.product}`)
     return(
       <DefaultLayout
       // title={this.props.user.title}
@@ -14,7 +15,8 @@ class UserShow extends React.Component {
               return (
                 <div className="productDiv" key={user._id}>
                   <p>Item: {user.name}</p>
-                    <p>Price: ${user.price}</p>
+                  <img id="imgTag" src={user.img} alt={user.product} Image/>
+                  <p>Price: ${user.price}</p>
                 </div>
               )
             })

@@ -75,14 +75,14 @@ const finDataController = {
           })
         } else {
           res.locals.data.qty = updatedQty
-          console.log(res.locals.data.qty)
           const boughtProduct = {
+            product: updatedQty.product,
             name: updatedQty.name,
+            img: updatedQty.img,
             price: updatedQty.price
           }
 
           Cart.create(boughtProduct, (err, createdCartItem) => {
-            console.log('bought product line 84 ', boughtProduct)
             if(err){
               res.status(404).send({
                 msg: err.message

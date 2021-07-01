@@ -1,7 +1,9 @@
 const{Schema, model} = require('mongoose');
 
 const cartSchema = new Schema({
-      name: {type: String},
+      product: String,
+      name: String,
+      img: String,
       price: Number
 });
 

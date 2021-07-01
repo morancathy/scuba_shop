@@ -1,14 +1,14 @@
 const Cart = require('../models/user.js');
 
 const userDataController = {
-  index(req, res, next){
-    Cart.find({}, (err, allItems) => {
+  show(req, res, next){
+    Cart.find({}, (err, allCartItems) => {
       if(err){
         res.status(404).send({
           msg: err.message
         })
       } else{
-        res.locals.data.user = allItems;
+        res.locals.data.user = allCartItems;
         next();
       }
     })

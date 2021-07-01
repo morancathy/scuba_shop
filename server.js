@@ -38,37 +38,36 @@ app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
 app.use('/booties', require('./controllers/bootieRouteController.js'))  //booties routes
 app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
 app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
-// app.use('/cart', require('./controllers/userRouteController.js'))
+app.use('/cart', require('./controllers/userRouteController.js'))
 
 // SEED route
 
-app.get('/cart/seed/', (req, res) => {
-  Cart.create([
-      {
-        name: 'mask',
-        price: 2.56
-      }], (err, data) =>{
-          res.redirect('/underthesea');
-      });
-    });
+// app.get('/cart/seed/', (req, res) => {
+//   Cart.create([
+//       {
+//         name: 'mask',
+//         price: 2.56
+//       }], (err, data) =>{
+//           res.redirect('/underthesea');
+//       });
+//     });
 
 //Index
 app.get('/', (req, res) => {
   res.send('This works')
 });
 
-//
-app.get('/cart', (req, res) => {
-  Cart.find({}, (err, allCartItems)=>{
-  if(err){
-    res.status(404).send({
-        msg: err.message
-    })
-  } else {
-    res.render('UserShow', {user: allCartItems})
-    };
-  });
-});
+// app.get('/cart', (req, res) => {
+//   Cart.find({}, (err, allCartItems)=>{
+//   if(err){
+//     res.status(404).send({
+//         msg: err.message
+//     })
+//   } else {
+//     res.render('UserShow', {user: allCartItems})
+//     };
+//   });
+// });
 
 //new
 //deletes
