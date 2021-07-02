@@ -24,9 +24,10 @@ class MaskShow extends React.Component {
       title={this.props.mask.title}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
         <div className="showDiv">
-          <nav>
-            <a id="backLink" href="/masks">Back</a>
-          </nav>
+        <nav>
+          <a id="backLink" href={`/${this.props.mask.product}s`}>Back to Products</a>
+          <a className="cartLink" href="/cart">Cart</a>
+        </nav>
           <p className="nameP">{this.props.mask.name} </p>
           <p>{this.props.mask.description}</p>
           <img id="imgTag" src={this.props.mask.img} alt="Mask Image"/>

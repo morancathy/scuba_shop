@@ -24,9 +24,10 @@ class BootieShow extends React.Component {
       title={this.props.bootie.title}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
       <div className="showDiv">
-        <nav>
-          <a id="backLink" href="/booties">Back</a>
-        </nav>
+      <nav>
+        <a id="backLink" href={`/${this.props.bootie.product}s`}>Back to Products</a>
+        <a className="cartLink" href="/cart">Cart</a>
+      </nav>
         <p className="nameP">{this.props.bootie.name} </p>
         <p>{this.props.bootie.description}</p>
         <img id="imgTag" src={this.props.bootie.img} alt="bootie Image"/>

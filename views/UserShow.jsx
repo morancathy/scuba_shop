@@ -1,3 +1,4 @@
+
 const React = require('react');
 const DefaultLayout = require('./layouts/Default');
 
@@ -15,9 +16,13 @@ class UserShow extends React.Component {
               return (
                 <div className="productDiv" key={user._id}>
                   <p>Item: {user.name}</p>
-                  <a href={`${user.link}`}>Link to Product</a>
-                  <img id="imgTag" src={user.img} alt={user.product} Image/>
-                  <p>Price: ${user.price}</p>
+                  <a href={`${user.link}`}>
+                   <img id="imgTag" src={user.img} alt={user.product} Image/>
+                 </a>
+                <p>${user.price}</p>
+                <form id="deleteBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
+                  <input type="submit" value="Remove Item from Cart"/>
+                </form>
                 </div>
               )
             })

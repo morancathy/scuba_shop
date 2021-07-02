@@ -9,9 +9,25 @@ border: solid yellow;
 }
 
 nav {
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
   margin-left: 0px;
 }
+
+#backLink {
+  box-shadow: inset 0 0 1000px 0 #333;
+  padding: 5px;
+  color: white;
+
+}
+
+.cartLink {
+  margin-right: 5px;
+  box-shadow: inset 0 0 1000px 0 #333;
+  padding: 5px;
+  color: white;
+}
+
 .editTag{
 
 }

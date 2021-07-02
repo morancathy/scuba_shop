@@ -11,7 +11,7 @@ class RegulatorNew extends React.Component{
         <h4>Product:</h4>
           <input type="text" name="product" defaultValue="regulator" /><br/>
         <h4>Name:</h4>
-          <input type="text" name="name" defaultValue="regulators" /><br/>
+          <input type="text" name="name" defaultValue="Regulator" /><br/>
         <h4>Description:</h4>
           <textarea rows="4" cols="50" name="description" /><br/>
         <h4>Image:</h4>

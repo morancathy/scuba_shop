@@ -11,7 +11,7 @@ userrouter.use(methodOverride('_method'));
 // NEW
 
 // DELETE
-
+userrouter.delete('/:id', userDataController.destroy, userViewController.redirectCart);
 // UPDATE
 
 // CREATE
@@ -21,6 +21,5 @@ userrouter.use(methodOverride('_method'));
 // SHOW
 userrouter.get('/', userDataController.show, userViewController.show);
 
-// userrouter.get('/:id', userDataController.show, userViewController.show);
 
 module.exports = userrouter;
