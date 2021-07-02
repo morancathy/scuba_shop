@@ -8,6 +8,8 @@ class New extends React.Component{
       title={"New Product"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/new.css'}]}>
         <form action="/underthesea" method="POST">
+        <h4>Product:</h4>
+          <input type="text" name="product" /><br/>
         <h4>Name:</h4>
           <input type="text" name="name" /><br/>
         <h4>Description:</h4>

@@ -25,7 +25,7 @@ class RegulatorIndex extends React.Component {
                   <a href={`/regulators/${regulator._id}`}>{regulator.name}</a>
                   <p>{regulator.description}</p>
                   <img className="imgTag" src={regulator.img} alt="regulator Image"/>
-                  <p>Price: ${regulator.price}</p>
+                  <p>${regulator.price}</p>
                 </div>
               )
             })

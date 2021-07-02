@@ -25,7 +25,7 @@ class BootieIndex extends React.Component {
                   <a href={`/booties/${bootie._id}`}>{bootie.name}</a>
                   <p>{bootie.description}</p>
                   <img className="imgTag" src={bootie.img} alt="bootie Image"/>
-                  <p>Price: ${bootie.price}</p>
+                  <p>${bootie.price}</p>
                 </div>
               )
             })

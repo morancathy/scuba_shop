@@ -74,13 +74,15 @@ const bcdDataController = {
             msg: err.message
           })
         } else {
-          res.locals.data.qty = updatedQty
+          res.locals.data.qty = updatedQty;
+          
           const boughtProduct = {
+            link: `/${updatedQty.product}/${updatedQty._id}`,
             product: updatedQty.product,
             name: updatedQty.name,
             img: updatedQty.img,
             price: updatedQty.price
-          }
+          };
 
           Cart.create(boughtProduct, (err, createdCartItem) => {
             if(err){

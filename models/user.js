@@ -3,6 +3,7 @@ const{Schema, model} = require('mongoose');
 const cartSchema = new Schema({
       product: String,
       name: String,
+      link: String,
       img: String,
       price: Number
 });
