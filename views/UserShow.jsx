@@ -8,13 +8,13 @@ class UserShow extends React.Component {
     return(
       <DefaultLayout
       // title={this.props.user.title}
-      styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/show.css'}]}>
-      <div className="showDiv">
+      styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
+      <div className="cartDiv">
         <h1>Cart</h1>
           {
             this.props.user.map((user)=>{
               return (
-                <div className="productDiv" key={user._id}>
+                <div className="cartItem" key={user._id}>
                   <p>Item: {user.name}</p>
                   <a href={`${user.link}`}>
                    <img id="imgTag" src={user.img} alt={user.product} Image/>
