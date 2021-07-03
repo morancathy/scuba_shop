@@ -9,7 +9,7 @@ class Index extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
           <nav className="nav">
-            <a className="createLink" href="/underthesea/new">Create New Product</a><a className="cartLink" href="/cart">Cart</a>
+            <a className="cartLink" href="/cart">Cart</a>
           </nav>
           <img className="diveImg" src="https://www.divelogz.com/wp-content/uploads/2019/05/Diver-flag-with-black-diver.png"/>
           <h1 className="h1">Under the Sea</h1>

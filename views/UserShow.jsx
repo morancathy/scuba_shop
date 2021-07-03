@@ -10,24 +10,24 @@ class UserShow extends React.Component {
       // title={this.props.user.title}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
       <div className="cartDiv">
+        <a className="backtoshop" href="/underthesea">Back to Shop</a>
         <h1>Cart</h1>
           {
             this.props.user.map((user)=>{
               return (
                 <div className="cartItem" key={user._id}>
-                  <p>Item: {user.name}</p>
                   <a href={`${user.link}`}>
-                   <img id="imgTag" src={user.img} alt={user.product} Image/>
-                 </a>
-                <p>${user.price}</p>
-                <form id="deleteBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
-                  <input type="submit" value="Remove Item from Cart"/>
-                </form>
+                   <img className="cartImg" src={user.img} alt={user.product} Image/>
+                  </a>
+                  <p className="nameTag">{user.name}</p>
+                  <p className="priceTag">${user.price}</p>
+                  <form className="removeBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
+                    <input type="submit" value="Remove from Cart"/>
+                    </form>
                 </div>
               )
             })
           }
-        <a id="backtoshop" href="/underthesea">Back to dive shop</a>
       </div>
       </DefaultLayout>
     )

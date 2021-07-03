@@ -75,9 +75,9 @@ const bootieDataController = {
           })
         } else {
           res.locals.data.qty = updatedQty;
-          
+
           const boughtProduct = {
-            link: `/${updatedQty.product}/${updatedQty._id}`,
+            link: `/${updatedQty.product}s/${updatedQty._id}`,
             product: updatedQty.product,
             name: updatedQty.name,
             img: updatedQty.img,

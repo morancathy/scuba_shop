@@ -8,11 +8,13 @@ class BcdIndex extends React.Component {
       // title={"bcds"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
-          <nav className="nav">
+        <nav className="nav">
+          <div className="leftLinks">
             <a className="backLink" href="/underthesea">Back to Main Shop</a>
-            <a className="createLink" href="/bcds/new">Create New Product</a>
-            <a className="cartLink" href="/cart">Cart</a>
-          </nav>
+            <a className="createLink" href="/masks/new">Create New Product</a>
+          </div>
+          <a className="cartLink" href="/cart">Cart</a>
+        </nav>
           <h1 className="h1">Under the Sea</h1>
           <h2 className="h2">Dive Shop</h2>
           <h2>BCDs</h2>

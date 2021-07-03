@@ -9,8 +9,10 @@ class MaskIndex extends React.Component {
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
           <nav className="nav">
-            <a className="backLink" href="/underthesea">Back to Main Shop</a>
-            <a className="createLink" href="/masks/new">Create New Product</a>
+            <div className="leftLinks">
+              <a className="backLink" href="/underthesea">Back to Main Shop</a>
+              <a className="createLink" href="/masks/new">Create New Product</a>
+            </div>
             <a className="cartLink" href="/cart">Cart</a>
           </nav>
           <h1 className="h1">Under the Sea</h1>
