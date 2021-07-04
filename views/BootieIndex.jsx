@@ -11,7 +11,7 @@ class BootieIndex extends React.Component {
         <nav className="nav">
           <div className="leftLinks">
             <a className="backLink" href="/underthesea">Back to Main Shop</a>
-            <a className="createLink" href="/masks/new">Create New Product</a>
+            <a className="createLink" href="/booties/new">Create New Product</a>
           </div>
           <a className="cartLink" href="/cart">Cart</a>
         </nav>

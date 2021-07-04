@@ -11,11 +11,17 @@ class Index extends React.Component {
           <nav className="nav">
             <a className="cartLink" href="/cart">Cart</a>
           </nav>
-          <img className="diveImg" src="https://www.divelogz.com/wp-content/uploads/2019/05/Diver-flag-with-black-diver.png"/>
-          <h1 className="h1">Under the Sea</h1>
-          <h2 className="h2">Dive Shop</h2>
+          <div className="blockTag">
+            <div className="diveImgDiv">
+              <img className="diveImg" src="https://www.divelogz.com/wp-content/uploads/2019/05/Diver-flag-with-black-diver.png"/>
+            </div>
+            <div className="hTags">
+              <h1 className="h1">~ Under the Sea ~</h1>
+              <h2 className="h2">Dive Shop</h2>
+            </div>
+          </div>
           <p className="introP">Your neighboorhood Chicago-land dive shop. We've been in buisness over 3 days! We offer
-          nothing but the best quality, prices and customer service.</p>
+          the best quality, prices and customer service in the mid-west!</p>
         </div>
         <div className="mainDiv">
           {

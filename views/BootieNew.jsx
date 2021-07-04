@@ -9,7 +9,7 @@ class BootieNew extends React.Component{
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/new.css'}]}>
         <form action="/booties" method="POST">
         <h4>Product:</h4>
-          <input type="text" name="product" defaultValue="bootie" /><br/>
+          <input type="text" name="product" defaultValue="bootie" readonly="readonly" /><br/>
         <h4>Name:</h4>
           <input type="text" name="name" defaultValue="Booties" /><br/>
         <h4>Description:</h4>

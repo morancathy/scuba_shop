@@ -47,6 +47,7 @@
 .h1 {
   margin-bottom: 0px;
   margin-top: 0px;
+  font-size: 40px;
 }
 
 .h2 {
@@ -87,8 +88,24 @@ footer {
 }
 
 /* Main Index Page Styling ######################*/
+.blockTag{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: -45px;
+}
+
+.diveImgDiv {
+margin-right: 1%;
+}
+
 .diveImg {
     width: 200px;
+}
+
+.hTags {
+
 }
 
 .introP {
@@ -104,6 +121,7 @@ footer {
     max-height: 320px;
     text-align: center;
     margin: 15px;
+
 }
 
 .productLink {

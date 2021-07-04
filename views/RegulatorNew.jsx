@@ -9,7 +9,7 @@ class RegulatorNew extends React.Component{
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/new.css'}]}>
         <form action="/regulators" method="POST">
         <h4>Product:</h4>
-          <input type="text" name="product" defaultValue="regulator" /><br/>
+          <input type="text" name="product" defaultValue="regulator" readonly="readonly" /><br/>
         <h4>Name:</h4>
           <input type="text" name="name" defaultValue="Regulator" /><br/>
         <h4>Description:</h4>
