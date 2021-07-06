@@ -6,12 +6,12 @@ class FinShow extends React.Component {
     const buyButton = () => {
             if (this.props.collection.qty > 0) {
                 return(
-                    <>
-                        <p>{`${this.props.collection.qty}`} in stock</p>
-                        <form action={`/${this.props.collection.product}s/${this.props.collection._id}/buy`}>
+                    <div className="buyDiv">
+                      <p>{`${this.props.collection.qty}`} in stock</p>
+                      <form action={`/${this.props.collection.product}s/${this.props.collection._id}/buy`}>
                         <input id="buy" type="submit" value="BUY"/>
-                        </form>
-                    </>
+                      </form>
+                    </div>
                 )
             }else {
                 return (
@@ -29,11 +29,11 @@ class FinShow extends React.Component {
           <a className="cartLink" href="/cart">Cart</a>
         </nav>
         <p className="nameP">{this.props.collection.name} </p>
-        <p>{this.props.collection.description}</p>
+        <p className="stretch">{this.props.collection.description}</p>
         <img id="imgTag" src={this.props.collection.img} alt={this.props.collection.product} Image/>
         <p>${this.props.collection.price}</p>
         {buyButton()}<br/><br/>
-        <a className="editTag" href={`/${this.props.collection.product}s/${this.props.collection._id}/edit`}>Edit Product</a>
+        <p><a className="editTag" href={`/${this.props.collection.product}s/${this.props.collection._id}/edit`}>Edit Product</a></p>
       </div>
       </DefaultLayout>
     )

@@ -33,7 +33,7 @@ class BcdIndex extends React.Component {
             })
           }
         </div>
-        <footer><div className="footDiv">~ never stop exploring ~</div><div>© diesel 2021 </div></footer>
+        <footer><div className="footDiv">~ never stop exploring ~</div><div>~ 2021 ~</div></footer>
       </DefaultLayout>
     )
   }

@@ -6,12 +6,12 @@ class BootieShow extends React.Component {
     const buyButton = () => {
             if (this.props.bootie.qty > 0) {
                 return(
-                    <>
-                        <p>{this.props.bootie.qty} in stock</p>
-                        <form action={`/booties/${this.props.bootie._id}/buy`}>
-                        <input id="buy" type="submit" value="BUY"/>
-                        </form>
-                    </>
+                  <div className="buyDiv">
+                    <p>{this.props.bootie.qty} in stock</p>
+                    <form action={`/booties/${this.props.bootie._id}/buy`}>
+                      <input id="buy" type="submit" value="BUY"/>
+                    </form>
+                  </div>
                 )
             }else {
                 return (
@@ -29,11 +29,11 @@ class BootieShow extends React.Component {
         <a className="cartLink" href="/cart">Cart</a>
       </nav>
         <p className="nameP">{this.props.bootie.name} </p>
-        <p>{this.props.bootie.description}</p>
+        <p className="stretch">{this.props.bootie.description}</p>
         <img id="imgTag" src={this.props.bootie.img} alt="bootie Image"/>
         <p>${this.props.bootie.price}</p>
         {buyButton()}<br/><br/>
-        <a className="editTag" href={`/booties/${this.props.bootie._id}/edit`}>Edit Product</a>
+        <p><a className="editTag" href={`/booties/${this.props.bootie._id}/edit`}>Edit Product</a></p>
       </div>
       </DefaultLayout>
     )

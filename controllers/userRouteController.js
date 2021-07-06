@@ -12,6 +12,7 @@ userrouter.use(methodOverride('_method'));
 
 // DELETE
 userrouter.delete('/:id', userDataController.destroy, userViewController.redirectCart);
+
 // UPDATE
 
 // CREATE

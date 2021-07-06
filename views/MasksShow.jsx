@@ -6,12 +6,12 @@ class MaskShow extends React.Component {
     const buyButton = () => {
             if (this.props.mask.qty > 0) {
                 return(
-                    <>
-                        <p>{this.props.mask.qty} in stock</p>
-                        <form action={`/masks/${this.props.mask._id}/buy`}>
+                    <div className="buyDiv">
+                      <p>{this.props.mask.qty} in stock</p>
+                      <form action={`/masks/${this.props.mask._id}/buy`}>
                         <input id="buy" type="submit" value="BUY"/>
-                        </form>
-                    </>
+                      </form>
+                    </div>
                 )
             }else {
                 return (
@@ -29,11 +29,11 @@ class MaskShow extends React.Component {
           <a className="cartLink" href="/cart">Cart</a>
         </nav>
           <p className="nameP">{this.props.mask.name} </p>
-          <p>{this.props.mask.description}</p>
+          <p className="stretch">{this.props.mask.description}</p>
           <img id="imgTag" src={this.props.mask.img} alt="Mask Image"/>
           <p>${this.props.mask.price}</p>
         {buyButton()}<br/><br/>
-          <a className="editTag" href={`/masks/${this.props.mask._id}/edit`}>Edit Product</a>
+          <p><a className="editTag" href={`/masks/${this.props.mask._id}/edit`}>Edit Product</a></p>
         </div>
       </DefaultLayout>
     )

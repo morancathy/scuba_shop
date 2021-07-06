@@ -6,12 +6,12 @@ class BcdShow extends React.Component {
     const buyButton = () => {
             if (this.props.bcd.qty > 0) {
                 return(
-                    <>
-                        <p>{this.props.bcd.qty} in stock</p>
-                        <form action={`/bcds/${this.props.bcd._id}/buy`}>
+                    <div className="buyDiv">
+                      <p>{this.props.bcd.qty} in stock</p>
+                      <form action={`/bcds/${this.props.bcd._id}/buy`}>
                         <input id="buy" type="submit" value="BUY"/>
-                        </form>
-                    </>
+                      </form>
+                    </div>
                 )
             }else {
                 return (
@@ -29,11 +29,11 @@ class BcdShow extends React.Component {
         <a className="cartLink" href="/cart">Cart</a>
       </nav>
         <p className="nameP">{this.props.bcd.name} </p>
-        <p>{this.props.bcd.description}</p>
+        <p className="stretch">{this.props.bcd.description}</p>
         <img id="imgTag" src={this.props.bcd.img} alt="BCD Image"/>
         <p>${this.props.bcd.price}</p>
         {buyButton()}<br/><br/>
-        <a className="editTag" href={`/bcds/${this.props.bcd._id}/edit`}>Edit Product</a>
+        <p><a className="editTag" href={`/bcds/${this.props.bcd._id}/edit`}>Edit Product</a></p>
       </div>
       </DefaultLayout>
     )

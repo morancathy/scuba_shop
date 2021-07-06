@@ -1,7 +1,6 @@
 *{font-family: Verdana, Helvetica, sans-serif;}
 
 body{
-  /* margin-left: 2%; */
   display: flex;
   flex-flow: row wrap;
   margin: 100px auto;
@@ -14,27 +13,30 @@ h1{
 }
 
 .div1 {
-    background-image: url("../img/malaysiablueyellow.jpg");
-    /* border: solid red; */
-    width: 33%;
-    height: 400px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 20px;
+  background-image: url("../img/malaysiablueyellow.jpg");
+  width: 33%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+
+.div2{
+  width 33%;
 }
 
 .div3 {
-    background-image: url("../img/malaysiaangel.jpg");
-    width: 33%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 20px;
+  background-image: url("../img/malaysiaangel.jpg");
+  width: 33%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 20px;
 }
+
 h4{
   margin-top: 15px;
   margin-bottom: 5px;
-  /* border: solid red; */
 }
+
 #deleteBut {
-  /* border: solid red; */
+
 }
