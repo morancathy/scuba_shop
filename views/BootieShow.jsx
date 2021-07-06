@@ -9,7 +9,7 @@ class BootieShow extends React.Component {
                     <>
                         <p>{this.props.bootie.qty} in stock</p>
                         <form action={`/booties/${this.props.bootie._id}/buy`}>
-                        <input type="submit" value="BUY"/>
+                        <input id="buy" type="submit" value="BUY"/>
                         </form>
                     </>
                 )

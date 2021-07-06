@@ -16,7 +16,7 @@ class Index extends React.Component {
               <img className="diveImg" src="https://www.divelogz.com/wp-content/uploads/2019/05/Diver-flag-with-black-diver.png"/>
             </div>
             <div className="hTags">
-              <h1 className="h1">~ Under the Sea ~</h1>
+              <h1 className="h1">Under the Sea</h1>
               <h2 className="h2">Dive Shop</h2>
             </div>
           </div>
@@ -37,10 +37,9 @@ class Index extends React.Component {
           }
         </div>
         <div className="div2Tag">
-          <h1>Another section to add things?</h1>
-        </div>
-        <div className="div3Tag">
-          <h1>Another section to add things?</h1>
+          <h1>Join us for our next excursion! Feb 2022!</h1>
+          <h3>Coron Island, Philippines</h3>
+          <p>4 days/5 nights exploring the sunken ships fo WWII.</p>
         </div>
         <footer><div className="footDiv">~ never stop exploring ~</div><div>© diesel 2021 </div></footer>
       </DefaultLayout>

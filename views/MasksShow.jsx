@@ -9,7 +9,7 @@ class MaskShow extends React.Component {
                     <>
                         <p>{this.props.mask.qty} in stock</p>
                         <form action={`/masks/${this.props.mask._id}/buy`}>
-                        <input type="submit" value="BUY"/>
+                        <input id="buy" type="submit" value="BUY"/>
                         </form>
                     </>
                 )

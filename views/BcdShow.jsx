@@ -9,7 +9,7 @@ class BcdShow extends React.Component {
                     <>
                         <p>{this.props.bcd.qty} in stock</p>
                         <form action={`/bcds/${this.props.bcd._id}/buy`}>
-                        <input type="submit" value="BUY"/>
+                        <input id="buy" type="submit" value="BUY"/>
                         </form>
                     </>
                 )

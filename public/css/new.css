@@ -1,3 +1,36 @@
+*{font-family: Verdana, Helvetica, sans-serif;}
+
+body{
+  /* margin-left: 2%; */
+  display: flex;
+  flex-flow: row wrap;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+h1{
+  position: absolute;
+  margin-top: -55px;
+}
+
+.div1 {
+    background-image: url("../img/malaysiaturtle.jpg");
+    /* border: solid red; */
+    width: 33%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
+.div3 {
+    background-image: url("../img/malaysiabumphead.jpg");
+    width: 33%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+}
+
 h4 {
   margin-bottom: 2px;
   margin-top: 10px;

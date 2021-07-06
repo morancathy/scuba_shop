@@ -9,7 +9,7 @@ class FinShow extends React.Component {
                     <>
                         <p>{`${this.props.collection.qty}`} in stock</p>
                         <form action={`/${this.props.collection.product}s/${this.props.collection._id}/buy`}>
-                        <input type="submit" value="BUY"/>
+                        <input id="buy" type="submit" value="BUY"/>
                         </form>
                     </>
                 )

@@ -1,6 +1,10 @@
+*{font-family: Verdana, Helvetica, sans-serif;}
+
 .showDiv {
 color: #ffffff;
-background-color: #FF69B4;
+/* background-color: #FF69B4; */
+background-color: #DDA0DD;
+box-shadow: inset 0 0 1000px 0 #333;
 text-align: center;
 margin: 20px auto;
 width: 30%;
@@ -14,41 +18,52 @@ nav {
   margin-left: 0px;
 }
 
-#backLink {
+.cartLink {
   box-shadow: inset 0 0 1000px 0 #333;
-  padding: 5px;
+  padding: 10px;
   color: white;
+  text-decoration: none;
+  font-size: 15px;
+  align-self: center;
 }
 
-.cartLink {
-  margin-right: 5px;
+#backLink {
   box-shadow: inset 0 0 1000px 0 #333;
-  padding: 5px;
+  padding: 10px;
   color: white;
+  text-decoration: none;
+  width: 60px;
+  font-size: 15px;
 }
 
 .editTag{
-
+  font-size: 10px;
 }
 
 .nameP {
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 30px;
   color: black;
 }
 
 p {
-  font-size: 22px;
+  font-size: 20px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-#backLink {
 
-}
-
-#commentLink {
-  padding-left: 300px;
-}
 
 #imgTag {
-  width: 200px;
+  width: 300px;
+}
+
+#buy{
+  /* box-shadow: inset 0 0 1000px 0 #333; */
+  background: #8B008B;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
 }

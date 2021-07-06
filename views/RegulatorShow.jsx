@@ -9,7 +9,7 @@ class RegulatorShow extends React.Component {
                     <>
                         <p>{this.props.regulator.qty} in stock</p>
                         <form action={`/regulators/${this.props.regulator._id}/buy`}>
-                        <input type="submit" value="BUY"/>
+                        <input id="buy" type="submit" value="BUY"/>
                         </form>
                     </>
                 )
@@ -34,7 +34,6 @@ class RegulatorShow extends React.Component {
         <p>${this.props.regulator.price}</p>
         {buyButton()}<br/><br/>
         <a className="editTag" href={`/regulators/${this.props.regulator._id}/edit`}>Edit Product</a>
-
       </div>
       </DefaultLayout>
     )
