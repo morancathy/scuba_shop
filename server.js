@@ -24,29 +24,13 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-app.use('/underthesea', require('./controllers/routeController.js'));         //main routes
-app.use('/masks', require('./controllers/maskRouteController.js'))            //mask routes
-app.use('/fins', require('./controllers/finRouteController.js'))              //fins routes
-app.use('/booties', require('./controllers/bootieRouteController.js'))        //booties routes
-app.use('/bcds', require('./controllers/bcdRouteController.js'))              //bcd routes
-app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
-app.use('/cart', require('./controllers/userRouteController.js'))             //cart routes
-
-// SEED route
-
-//Index
-
-//new
-
-//deletes
-
-//update
-
-//create
-
-//edit
-
-//show
+app.use('/underthesea', require('./controllers/routeController.js'));
+app.use('/masks', require('./controllers/maskRouteController.js'))            
+app.use('/fins', require('./controllers/finRouteController.js'))
+app.use('/booties', require('./controllers/bootieRouteController.js'))
+app.use('/bcds', require('./controllers/bcdRouteController.js'))
+app.use('/regulators', require('./controllers/regulatorRouteController.js'))
+app.use('/cart', require('./controllers/userRouteController.js'))
 
 
 //tell app to listen on port 3000 for HTTP requests from clients

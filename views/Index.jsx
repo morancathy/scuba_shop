@@ -19,8 +19,7 @@ class Index extends React.Component {
               <h2 className="h2">Dive Shop</h2>
             </div>
           </div>
-          <p className="introP">Your neighboorhood Chicago-land dive shop. We've been in buisness over 3 days! We offer
-          the best quality, prices and customer service in the mid-west!</p>
+          <p className="introP">Your neighborhood Chicago-land dive shop. We've been in business over 3 days! We offer the best quality, prices and customer service in the mid-west!</p>
         </div>
         <div className="mainDiv">
           {
