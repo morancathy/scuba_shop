@@ -3,13 +3,6 @@ const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
 const PORT = process.env.PORT || 3000;
-// const Product = require('./models/product.js');  //will eventually delete these
-// const Mask = require('./models/masks.js');
-// const Fin = require('./models/fin.js');
-// const Bootie = require('./models/bootie.js');
-// const Bcd = require('./models/bcd.js');
-// const Regulator = require('./models/regulator.js');
-// const Cart = require('./models/user.js');
 
 // Set Up Data
 const db = require('./models/db');
@@ -32,7 +25,6 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 app.use('/underthesea', require('./controllers/routeController.js'));         //main routes
-// app.use('/underthesea/user', require('./controllers/userRouteController.js')) //purchaseing routes
 app.use('/masks', require('./controllers/maskRouteController.js'))            //mask routes
 app.use('/fins', require('./controllers/finRouteController.js'))              //fins routes
 app.use('/booties', require('./controllers/bootieRouteController.js'))        //booties routes
@@ -43,9 +35,7 @@ app.use('/cart', require('./controllers/userRouteController.js'))             //
 // SEED route
 
 //Index
-app.get('/', (req, res) => {
-  res.send('This works')
-});
+
 //new
 
 //deletes
