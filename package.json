@@ -1,4 +1,7 @@
 {
+  "engines":{
+    "node": "14.17.0"
+  },
   "name": "scuba_shop",
   "version": "1.0.0",
   "description": "",
