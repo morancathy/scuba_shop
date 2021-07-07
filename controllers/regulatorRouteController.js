@@ -24,7 +24,7 @@ regulatorrouter.put('/:id', regulatorDataController.update, regulatorViewControl
 regulatorrouter.post('/', regulatorDataController.create, regulatorViewController.redirectHome);
 
 //BUY
-regulatorrouter.get('/:id/buy', regulatorDataController.buy, userDataController.show, userViewController.show);
+regulatorrouter.get('/:id/buy', regulatorDataController.buy, userDataController.show, userViewController.redirectCart);
 
 // EDIT
 regulatorrouter.get('/:id/edit', regulatorDataController.show, regulatorViewController.edit);

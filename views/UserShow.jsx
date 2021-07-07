@@ -20,9 +20,10 @@ class UserShow extends React.Component {
                     </a>
                     <p className="nameTag">{user.name}</p>
                     <p className="priceTag">${user.price}</p>
+                    {console.log("usershow", user)}
                     <form className="removeBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
                       <input type="submit" value="Remove from Cart"/>
-                      </form>
+                    </form>
                   </div>
                 )
               })

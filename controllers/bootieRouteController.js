@@ -24,7 +24,7 @@ bootierouter.put('/:id', bootieDataController.update, bootieViewController.redir
 bootierouter.post('/', bootieDataController.create, bootieViewController.redirectHome);
 
 //BUY
-bootierouter.get('/:id/buy', bootieDataController.buy, userDataController.show, userViewController.show);
+bootierouter.get('/:id/buy', bootieDataController.buy, userDataController.show, userViewController.redirectCart);
 
 // EDIT
 bootierouter.get('/:id/edit', bootieDataController.show, bootieViewController.edit);

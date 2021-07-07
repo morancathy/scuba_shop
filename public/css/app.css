@@ -7,12 +7,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100vw 100%;
   background-size: cover;
-    /* border: solid purple; */
 }
-
-/* header {
-  border: solid red;
-} */
 
 footer{
   display: flex;

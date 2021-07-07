@@ -24,7 +24,7 @@ finrouter.put('/:id', finDataController.update, finViewController.redirectShow);
 finrouter.post('/', finDataController.create, finViewController.redirectHome);
 
 //BUY
-finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.show);
+finrouter.get('/:id/buy', finDataController.buy, userDataController.show, userViewController.redirectCart);
 
 // EDIT
 finrouter.get('/:id/edit', finDataController.show, finViewController.edit);

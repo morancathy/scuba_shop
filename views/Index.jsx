@@ -37,9 +37,7 @@ class Index extends React.Component {
           }
         </div>
         <div className="div2Tag">
-          <h1>Join us for our next excursion! Feb 2022!</h1>
-          <h2>Coron Island, Philippines</h2>
-          <h3>Details Coming Soon!</h3>
+
         </div>
         <footer><div className="footDiv">~ never stop exploring ~</div><div>~ 2021 ~</div></footer>
       </DefaultLayout>

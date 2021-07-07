@@ -78,12 +78,13 @@ const finDataController = {
 
           const boughtProduct = {
             link: `/${updatedQty.product}s/${updatedQty._id}`,
+            originalId: updatedQty._id,
             product: updatedQty.product,
             name: updatedQty.name,
             img: updatedQty.img,
             price: updatedQty.price
           };
-
+          console.log("findatacontroller. Originial ID", boughtProduct.originalId)
           Cart.create(boughtProduct, (err, createdCartItem) => {
             if(err){
               res.status(404).send({
