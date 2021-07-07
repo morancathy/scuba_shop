@@ -5,7 +5,6 @@ class BootieIndex extends React.Component {
   render(){
     return (
       <DefaultLayout
-      // title={"booties"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
         <nav className="nav">

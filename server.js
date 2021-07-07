@@ -3,13 +3,13 @@ const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const Product = require('./models/product.js');  //will eventually delete these
-const Mask = require('./models/masks.js');
-const Fin = require('./models/fin.js');
-const Bootie = require('./models/bootie.js');
-const Bcd = require('./models/bcd.js');
-const Regulator = require('./models/regulator.js');
-const Cart = require('./models/user.js');
+// const Product = require('./models/product.js');  //will eventually delete these
+// const Mask = require('./models/masks.js');
+// const Fin = require('./models/fin.js');
+// const Bootie = require('./models/bootie.js');
+// const Bcd = require('./models/bcd.js');
+// const Regulator = require('./models/regulator.js');
+// const Cart = require('./models/user.js');
 
 // Set Up Data
 const db = require('./models/db');
@@ -31,61 +31,32 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-app.use('/underthesea', require('./controllers/routeController.js')); //main routes
-app.use('/underthesea/user', require('./controllers/userRouteController.js'))   //shopping cart routes
-app.use('/masks', require('./controllers/maskRouteController.js'))  //mask routes
-app.use('/fins', require('./controllers/finRouteController.js'))  //fins routes
-app.use('/booties', require('./controllers/bootieRouteController.js'))  //booties routes
-app.use('/bcds', require('./controllers/bcdRouteController.js'))  //bcd routes
+app.use('/underthesea', require('./controllers/routeController.js'));         //main routes
+// app.use('/underthesea/user', require('./controllers/userRouteController.js')) //purchaseing routes
+app.use('/masks', require('./controllers/maskRouteController.js'))            //mask routes
+app.use('/fins', require('./controllers/finRouteController.js'))              //fins routes
+app.use('/booties', require('./controllers/bootieRouteController.js'))        //booties routes
+app.use('/bcds', require('./controllers/bcdRouteController.js'))              //bcd routes
 app.use('/regulators', require('./controllers/regulatorRouteController.js'))  //regulator routes
-app.use('/cart', require('./controllers/userRouteController.js'))
+app.use('/cart', require('./controllers/userRouteController.js'))             //cart routes
 
 // SEED route
-
-// app.get('/cart/seed/', (req, res) => {
-//   Cart.create([
-//       {
-//         name: 'mask',
-//         price: 2.56
-//       }], (err, data) =>{
-//           res.redirect('/underthesea');
-//       });
-//     });
 
 //Index
 app.get('/', (req, res) => {
   res.send('This works')
 });
-
-// app.get('/cart', (req, res) => {
-//   Cart.find({}, (err, allCartItems)=>{
-//   if(err){
-//     res.status(404).send({
-//         msg: err.message
-//     })
-//   } else {
-//     res.render('UserShow', {user: allCartItems})
-//     };
-//   });
-// });
-
 //new
+
 //deletes
+
 //update
+
 //create
+
 //edit
+
 //show
-// app.get('/regulators/:id', (req, res) => {
-//   Regulator.findById(req.params.id, (err, foundRegulator)=>{
-//     if(err){
-//       res.status(404).send({
-//           msg: err.message
-//       })
-//     } else {
-//       res.render('RegulatorShow', {regulator: foundRegulator});
-//     };
-//   });
-// });
 
 
 //tell app to listen on port 3000 for HTTP requests from clients

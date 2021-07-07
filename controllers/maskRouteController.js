@@ -33,6 +33,4 @@ maskrouter.get('/:id/edit', maskDataController.show, maskViewController.edit);
 maskrouter.get('/:id', maskDataController.show, maskViewController.show);
 
 
-
-
 module.exports = maskrouter;

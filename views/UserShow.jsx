@@ -4,7 +4,6 @@ const DefaultLayout = require('./layouts/Default');
 
 class UserShow extends React.Component {
   render() {
-    console.log(`/${this.props.user.product}`)
     return(
       <DefaultLayout
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
@@ -20,7 +19,6 @@ class UserShow extends React.Component {
                     </a>
                     <p className="nameTag">{user.name}</p>
                     <p className="priceTag">${user.price}</p>
-                    {console.log("usershow", user)}
                     <form className="removeBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
                       <input type="submit" value="Remove from Cart"/>
                     </form>

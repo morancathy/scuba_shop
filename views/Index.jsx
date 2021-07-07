@@ -5,7 +5,6 @@ class Index extends React.Component {
   render(){
     return (
       <DefaultLayout
-      // title={"Products"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="introDiv">
           <nav className="nav">
@@ -37,7 +36,6 @@ class Index extends React.Component {
           }
         </div>
         <div className="div2Tag">
-
         </div>
         <footer><div className="footDiv">~ never stop exploring ~</div><div>~ 2021 ~</div></footer>
       </DefaultLayout>

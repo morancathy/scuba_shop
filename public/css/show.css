@@ -63,7 +63,7 @@ p {
   color: white;
   margin: 0 auto;
   width: 73%;
-  /* max-width: 230px; */
+  /* max-width: 230px; */         /* My entire project is mobile responsive...EXCEPT the buy button. I'm working on fixing this.*/
 }
 
 .editTag{

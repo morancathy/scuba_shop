@@ -16,7 +16,6 @@ class Show extends React.Component {
         <img id="imgTag" src={this.props.product.img} alt="Product Image"/>
         <p>Price: ${this.props.product.price}</p>
         <p>{this.props.product.qty} left in stock</p>
-
         <form action={`/underthesea/${this.props.product._id}?_method=PUT`} method="POST">
             <input className="buyButton" name="buyButton" type="submit" value="Buy"/>
         </form>

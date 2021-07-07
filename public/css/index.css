@@ -107,7 +107,6 @@ h2 {
 
 .productDiv > p {
   padding: 5px;
-/* box-shadow: inset 0 0 1000px 0 #d9d4d4; */
 }
 
 
@@ -179,7 +178,6 @@ footer {
   border: solid black;
   margin: 10px;
   color: white;
-
   background-image: url('https://travelandco.com.au/wp-content/uploads/sites/6/2017/03/walandi-png-dive.jpg');
   background-position: center;
   height: 150px;
