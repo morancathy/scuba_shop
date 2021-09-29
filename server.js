@@ -25,7 +25,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 app.use('/underthesea', require('./controllers/routeController.js'));
-app.use('/masks', require('./controllers/maskRouteController.js'))            
+app.use('/masks', require('./controllers/maskRouteController.js'))
 app.use('/fins', require('./controllers/finRouteController.js'))
 app.use('/booties', require('./controllers/bootieRouteController.js'))
 app.use('/bcds', require('./controllers/bcdRouteController.js'))
