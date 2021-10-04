@@ -7,12 +7,13 @@ class BcdNew extends React.Component{
       <DefaultLayout
       title={"New Product"}
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/new.css'}]}>
+      <a id="new-backLink" href={`/bcds`}>Back</a>
         <div className="div1">
         </div>
         <div className="div2">
           <form action="/bcds" method="POST">
           <h4>Product:</h4>
-            <input type="text" name="product" defaultValue="bcd" readonly="readonly" /><br/>
+            <input type="text" name="product" defaultValue="bcd" readOnly="readOnly" /><br/>
           <h4>Name:</h4>
             <input type="text" name="name" defaultValue="bcds" /><br/>
           <h4>Description:</h4>

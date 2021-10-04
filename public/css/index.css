@@ -264,4 +264,9 @@ footer {
   text-decoration: none;
 }
 
+.cart-total {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 /* ############################################*/
