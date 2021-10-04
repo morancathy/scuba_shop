@@ -4,8 +4,14 @@ const DefaultLayout = require('./layouts/Default');
 
 class UserShow extends React.Component {
   render() {
+
+    let price = 0;
+    const total = (amt) => {
+      price = price + amt
+    }
+
     return(
-      <DefaultLayout
+    <DefaultLayout
       styles={[{key: 0, href: '/css/app.css'}, { key: 1, href: '/css/index.css'}]}>
         <div className="cartDiv">
           <a className="backtoshop" href="/underthesea">Continue Shopping</a>
@@ -13,6 +19,7 @@ class UserShow extends React.Component {
             {
               this.props.user.map((user)=>{
                 return (
+                  <>
                   <div className="cartItem" key={user._id}>
                     <a href={`${user.link}`}>
                      <img className="cartImg" src={user.img} alt={user.product} Image/>
@@ -23,9 +30,12 @@ class UserShow extends React.Component {
                       <input type="submit" value="Remove from Cart"/>
                     </form>
                   </div>
+                  {total(user.price)}
+                  </>
                 )
               })
             }
+            <p className="cart-total">Total $ {price}</p>
         </div>
       </DefaultLayout>
     )
