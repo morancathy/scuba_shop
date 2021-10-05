@@ -184,9 +184,9 @@ footer {
  }
  .cartLink {
    padding: 9px;
-   height: 5px;
+   height: 9.6px;
    font-size: 9px;
-   margin-top: 8px;
+   margin-top: 5.4px;
  }
  .createLink {
    padding: 9px;
@@ -220,6 +220,7 @@ footer {
    height: 75px;
  }
 }
+
 /* #######   Media Queries (end)###############*/
 
 /* Cart Styling ################################*/
@@ -232,7 +233,8 @@ footer {
   text-align: center;
   padding-bottom: 15px;
   margin: 0px auto;
-  min-width: 42%;
+  /* min-width: 42%;
+  max-width: 100vw; */
 }
 
 .cartItem {
@@ -283,4 +285,34 @@ footer {
 .cart-total {
   font-weight: bold;
   font-size: 20px;
+}
+@media screen and (max-width: 375px) {
+  .cartDiv {
+    width: 100%;
+  }
+  .cartItem {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .removeBut{
+    width: 10%;
+    margin-left: -50px;
+  }
+  .removeBut > input {
+    font-size: 11px;
+  }
+  .priceTag, .nameTag{
+    margin-left: -15px;
+  }
+  .nameTag, .priceTag {
+    font-size: calc(10px + 1vw);
+  }
+  .cartImg {
+    margin-left: -5px;
+  }
+  .backtoshop {
+    font-size: 12px;
+    padding: 5px;
+    margin-top: -20px;
+  }
 }

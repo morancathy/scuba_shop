@@ -73,14 +73,20 @@ h4 {
   }
   .new-div {
     flex-direction: column;
-  }
+    }
   .new-div > .div1{
     margin-top: 100px;
+    width: 320px;
+
   }
   .new-div > .div2{
-    margin-left: 150px;
+    margin-top: -200px;
+    margin-left: 60px;
+  }
+  .new-div > .div3{
+    width: 320px;
   }
   h1{
-    margin-left: 160px;
+    margin-left: 30px;
   }
 }

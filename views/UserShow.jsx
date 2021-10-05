@@ -27,7 +27,7 @@ class UserShow extends React.Component {
                     <p className="nameTag">{user.name}</p>
                     <p className="priceTag">${user.price}</p>
                     <form className="removeBut" method="POST" action={`cart/${user._id}?_method=DELETE`} >
-                      <input type="submit" value="Remove from Cart"/>
+                      <input type="submit" value="Remove"/>
                     </form>
                   </div>
                   {total(user.price)}
