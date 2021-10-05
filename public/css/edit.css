@@ -11,22 +11,29 @@ h1{
   position: absolute;
   margin-top: -55px;
 }
-
-.div1 {
+.edit-div {
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 50px;
+}
+.edit-div > .div1 {
   background-image: url("../img/malaysiablueyellow.jpg");
   width: 33%;
+  width: 500px;
+  height: 450px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 20px;
 }
 
-.div2{
-  width 33%;
-}
-
-.div3 {
+.edit-div > .div3 {
   background-image: url("../img/malaysiaangel.jpg");
   width: 33%;
+  width: 500px;
+  height: 450px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 20px;
@@ -37,6 +44,8 @@ h4{
   margin-bottom: 5px;
 }
 
-#deleteBut {
-
+@media screen and (max-width: 700px) {
+  .edit-div > .div2{
+    margin-top: -200px;
+  }
 }
