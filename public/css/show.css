@@ -27,7 +27,7 @@ nav {
   color: white;
   text-decoration: none;
   align-self: center;
-  font-size: .8vw;
+  font-size: 12px;
 }
 
 #backLink {
@@ -36,19 +36,19 @@ nav {
   color: white;
   text-decoration: none;
   width: 60px;
-  font-size: .8vw;
+  font-size: 12px;
 }
 
 .nameP {
   font-weight: bolder;
   color: black;
-  font-size: 1.5vw;
+  font-size: 25px;
   margin-top: 50px;
 }
 
 p {
   width: 300px;
-  font-size: 1vw;
+  font-size: 18px;
   margin: 0 auto;
   padding: 10px;
 }
@@ -63,9 +63,27 @@ p {
   color: white;
   margin: 0 auto;
   width: 73%;
-  /* max-width: 230px; */         /* My entire project is mobile responsive...EXCEPT the buy button. I'm working on fixing this.*/
 }
 
 .editTag{
   font-size: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .showDiv {
+    min-width: 300px;
+  }
+  .nameP {
+    font-size: calc(18px + 1vw);
+  }
+  p {
+    font-size: calc(12px + 1vw);
+  }
+  .cartLink {
+    margin-right: -90px;
+  }
+
+  #backLink {
+    margin-left: -90px;
+  }
 }

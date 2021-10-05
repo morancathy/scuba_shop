@@ -1,6 +1,6 @@
 *{font-family: Verdana, Helvetica, sans-serif;}
 
-body{
+body {
   display: flex;
   flex-flow: row wrap;
   margin: 100px auto;
@@ -8,38 +8,50 @@ body{
 }
 
 #new-backLink {
-    margin-top: -80px;
-    box-shadow: inset 0 0 1000px 0 #333;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    width: 40px;
-    height: 15px;
-    text-align: center;
-    font-size: 1vw;
+  margin-top: -90px;
+  box-shadow: inset 0 0 1000px 0 #333;
+  padding-top: 10px;
+  color: white;
+  text-decoration: none;
+  width: 60px;
+  height: 20px;
+  text-align: center;
+}
 
-  }
-
-h1{
+h1 {
   position: absolute;
   margin-top: -55px;
 }
 
-.div1 {
+.new-div {
+  display: flex;
+  flex-direction: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.new-div > .div1 {
   background-image: url("../img/malaysiaturtle.jpg");
-  width: 33%;
+  width: 500px;
+  height: 450px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 20px;
 }
 
-.div2{
-  width 33%;
+ .new-div > .div2{
+  padding: 25px;
+  align-content: center;
+  margin-top: -50px;
 }
 
-.div3 {
+.new-div > .div3 {
   background-image: url("../img/malaysiabumphead.jpg");
   width: 33%;
+  width: 500px;
+  height: 450px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 20px;
@@ -52,4 +64,23 @@ h4 {
 
 #submit {
   margin-top: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  #new-backLink {
+    margin-left: 20px;
+    margin-top: -140px;
+  }
+  .new-div {
+    flex-direction: column;
+  }
+  .new-div > .div1{
+    margin-top: 100px;
+  }
+  .new-div > .div2{
+    margin-left: 150px;
+  }
+  h1{
+    margin-left: 160px;
+  }
 }
